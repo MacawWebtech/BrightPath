@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8"><link rel="icon" type="image/svg+xml" href="../assets/images/logo/favicon.svg"><link rel="icon" type="image/png" sizes="32x32" href="../assets/images/logo/favicon-32.png"><link rel="apple-touch-icon" href="../assets/images/logo/apple-touch-icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign In — BrightPath Academy | School Tutoring Center</title>
+  <meta name="description" content="Sign in to your BrightPath Academy Parent Portal to track academic progress, manage schedules, and review tutoring sessions.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/dark-mode.css">
+  <link rel="stylesheet" href="../assets/css/rtl.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+  <!-- Theme & RTL FOUC Prevention Script -->
+  <script>
+    (function () {
+      try {
+        var savedTheme = localStorage.getItem('brightpath-theme');
+        if (savedTheme) {
+          document.documentElement.setAttribute('data-theme', savedTheme);
+        } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+        var savedRTL = localStorage.getItem('brightpath-rtl');
+        if (savedRTL === 'true') {
+          document.documentElement.setAttribute('dir', 'rtl');
+          document.documentElement.setAttribute('lang', 'ar');
+        }
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+  <main class="auth-page">
+    <!-- Standalone Controls Toolbar -->
+    <div style="position: absolute; top: var(--space-3); right: var(--space-3); display: flex; align-items: center; gap: var(--space-1); z-index: 10;">
+      <button type="button" class="header-icon-btn theme-toggle-btn" aria-label="Toggle dark and light theme" title="Toggle theme">
+        <span class="icon-sun" style="display: none;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        </span>
+        <span class="icon-moon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </span>
+      </button>
+      <button type="button" class="header-icon-btn rtl-toggle-btn" aria-label="Toggle RTL layout" title="Toggle RTL" style="font-family: var(--font-heading); font-weight: 700; font-size: 13px; color: var(--text-primary);">RTL</button>
+    </div>
+
+    <!-- Auth Card -->
+    <div class="auth-card reveal active">
+      <a href="index.html" class="auth-logo" aria-label="BrightPath Academy Home">
+        <div class="logo-icon"><img src="../assets/images/logo/logo-icon.svg" alt="" width="40" height="40"></div>
+        <span class="logo-text">BrightPath</span>
+      </a>
+
+      <h1 class="auth-title">Welcome Back</h1>
+      <p class="auth-subtitle">Sign in to your parent portal to continue</p>
+
+      <form id="loginForm" data-validate="true" novalidate>
+
+        <div class="form-group">
+          <label for="login-email" class="form-label">Email Address</label>
+          <div class="input-group">
+            <span class="input-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </span>
+            <input type="email" id="login-email" name="email" class="form-input" placeholder="name@example.com" autocomplete="email" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="login-password" class="form-label">Password</label>
+          <div class="input-group">
+            <span class="input-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            </span>
+            <input type="password" id="login-password" name="password" class="form-input" placeholder="Enter your password" autocomplete="current-password" required style="padding-right: 44px;">
+            <button type="button" class="password-toggle" aria-label="Toggle password visibility">
+              <span class="icon-eye">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+              </span>
+              <span class="icon-eye-off" style="display: none;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"/><line x1="1" y1="1" x2="23" y2="23"/></svg>
+              </span>
+            </button>
+          </div>
+        </div>
+
+        <div class="form-group" style="display: flex; align-items: center; justify-content: space-between; margin-bottom: var(--space-4);">
+          <label class="form-check" for="remember-me" style="margin-bottom: 0; cursor: pointer;">
+            <input type="checkbox" id="remember-me" name="remember-me">
+            <span style="font-size: var(--fs-sm); color: var(--text-secondary);">Remember me</span>
+          </label>
+          <a href="forgot-password.html" style="font-size: var(--fs-sm); color: var(--color-primary); font-weight: var(--fw-medium); text-decoration: none;">Forgot Password?</a>
+        </div>
+
+        <button type="submit" class="btn btn-primary w-full">Sign In</button>
+
+        <!-- Quick Demo Credentials Box -->
+        <div style="margin-top: var(--space-3); padding: var(--space-2); background-color: var(--color-primary-lighter); border: 1px dashed var(--color-primary-border); border-radius: var(--border-radius-sm); font-size: var(--fs-xs); color: var(--text-secondary); text-align: center;">
+          <div style="font-weight: var(--fw-semibold); color: var(--text-primary); margin-bottom: 2px;">Demo Access:</div>
+          <div>Parent: <code>parent@brightpath.edu</code></div>
+        </div>
+      </form>
+
+      <div class="auth-footer">
+        Don't have an account? <a href="register.html" style="color: var(--color-primary);">Create Account</a>
+      </div>
+    </div>
+  </main>
+
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,217 @@
+/* ============================================================
+   BRIGHTPATH ACADEMY — RTL (Right-to-Left) Support
+   Logical property mirroring for Arabic/Hebrew layouts
+   ============================================================ */
+
+[dir="rtl"] {
+  /* Base direction override */
+  direction: rtl;
+  text-align: right;
+}
+
+/* --- Header --- */
+[dir="rtl"] .header-nav {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+[dir="rtl"] .nav-dropdown-menu {
+  left: auto;
+  right: 0;
+}
+
+[dir="rtl"] .mobile-drawer {
+  right: auto;
+  left: -100%;
+  transition: left var(--transition-base);
+}
+
+[dir="rtl"] .mobile-drawer.open {
+  left: 0;
+}
+
+/* --- Inputs --- */
+[dir="rtl"] .form-select {
+  background-position: left 14px center;
+  padding-left: 40px;
+  padding-right: 16px;
+}
+
+[dir="rtl"] .input-group .input-icon {
+  left: auto;
+  right: 14px;
+}
+
+[dir="rtl"] .input-group .form-input {
+  padding-left: 16px;
+  padding-inline-start: 42px;
+}
+
+[dir="rtl"] .password-toggle {
+  right: auto;
+  left: 14px;
+}
+
+/* --- Sidebar (Dashboard) --- */
+[dir="rtl"] .dashboard-sidebar {
+  left: auto;
+  right: 0;
+  border-right: none;
+  border-left: 1px solid var(--border-color);
+}
+
+[dir="rtl"] .dashboard-main {
+  margin-left: 0;
+  margin-right: var(--sidebar-width);
+}
+
+[dir="rtl"] .dashboard-sidebar.collapsed ~ .dashboard-main {
+  margin-left: 0;
+  margin-right: var(--sidebar-collapsed-width);
+}
+
+[dir="rtl"] .sidebar-collapse-btn {
+  transform: rotate(180deg);
+}
+
+[dir="rtl"] .dashboard-sidebar.collapsed .sidebar-collapse-btn {
+  transform: rotate(0deg);
+}
+
+/* --- Notification dropdown --- */
+[dir="rtl"] .notification-dropdown {
+  right: auto;
+  left: 0;
+}
+
+/* --- Timetable border flip --- */
+[dir="rtl"] .timetable-class {
+  border-left: none;
+  border-right: 3px solid var(--color-primary);
+  border-radius: var(--border-radius-sm) 0 0 var(--border-radius-sm);
+}
+
+/* --- Timeline --- */
+[dir="rtl"] .timeline {
+  padding-left: 0;
+  padding-right: var(--space-4);
+}
+
+[dir="rtl"] .timeline::before {
+  left: auto;
+  right: 15px;
+}
+
+[dir="rtl"] .timeline-item {
+  padding-left: 0;
+  padding-right: var(--space-3);
+}
+
+[dir="rtl"] .timeline-item::before {
+  left: auto;
+  right: -25px;
+}
+
+/* --- Back to top --- */
+[dir="rtl"] .back-to-top {
+  right: auto;
+  left: var(--space-3);
+}
+
+/* --- Breadcrumb --- */
+[dir="rtl"] .breadcrumb {
+  direction: rtl;
+}
+
+/* --- Accordion icon --- */
+[dir="rtl"] .accordion-trigger {
+  text-align: right;
+}
+
+/* --- Footer grid alignment --- */
+[dir="rtl"] .footer-contact-item {
+  flex-direction: row;
+}
+
+/* --- Card text alignment --- */
+[dir="rtl"] .card-body {
+  text-align: right;
+}
+
+[dir="rtl"] .tutor-card .tutor-name,
+[dir="rtl"] .tutor-card .tutor-qualification,
+[dir="rtl"] .tutor-card .tutor-subject,
+[dir="rtl"] .tutor-card .tutor-bio {
+  text-align: center;
+}
+
+/* --- Tables --- */
+[dir="rtl"] .data-table th,
+[dir="rtl"] .data-table td {
+  text-align: right;
+}
+
+/* --- Wizard steps --- */
+[dir="rtl"] .wizard-steps {
+  direction: rtl;
+}
+
+/* --- Tab group --- */
+[dir="rtl"] .tab-group {
+  direction: rtl;
+}
+
+/* --- Modal close --- */
+[dir="rtl"] .modal-footer {
+  justify-content: flex-start;
+}
+
+/* --- General logical spacing overrides --- */
+[dir="rtl"] .section-header {
+  text-align: right;
+}
+
+[dir="rtl"] .section-header.text-center {
+  text-align: center;
+}
+
+[dir="rtl"] .hero-content {
+  text-align: right;
+}
+
+[dir="rtl"] .text-start {
+  text-align: right;
+}
+
+/* --- Stats / comparison check icons --- */
+[dir="rtl"] .comparison-table td:first-child {
+  text-align: right;
+}
+
+/* --- Notification count badge --- */
+[dir="rtl"] .notification-count {
+  right: auto;
+  left: -2px;
+}
+
+/* --- Student switcher --- */
+[dir="rtl"] .student-switcher {
+  direction: rtl;
+}
+
+/* --- Avatar group overlap direction --- */
+[dir="rtl"] .avatar-group .avatar {
+  margin-left: 0;
+  margin-right: -8px;
+}
+
+[dir="rtl"] .avatar-group .avatar:first-child {
+  margin-right: 0;
+}
+
+/* --- Print RTL fix --- */
+@media print {
+  [dir="rtl"] .dashboard-main {
+    margin-right: 0 !important;
+  }
+}

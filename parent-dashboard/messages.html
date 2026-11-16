@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head><script src="../assets/js/auth-guard.js"></script>
+  <meta charset="UTF-8"><link rel="icon" type="image/svg+xml" href="../assets/images/logo/favicon.svg"><link rel="icon" type="image/png" sizes="32x32" href="../assets/images/logo/favicon-32.png"><link rel="apple-touch-icon" href="../assets/images/logo/apple-touch-icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Messages & PTM — BrightPath Academy | School Tutoring Center</title>
+  <meta name="description" content="Read teacher feedback, center announcements, administrative circulars, and view PTM schedules at BrightPath Academy Tutoring Center.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/dark-mode.css">
+  <link rel="stylesheet" href="../assets/css/rtl.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+</head>
+<body>
+  <div class="dashboard-layout">
+    <!-- Dashboard Sidebar -->
+    <aside class="dashboard-sidebar" aria-label="Parent Dashboard Navigation">
+      <div class="sidebar-header">
+        <a href="index.html" class="sidebar-logo">
+          <div class="logo-icon"><img src="../assets/images/logo/logo-icon.svg" alt="" width="40" height="40"></div><span class="logo-text">BrightPath</span>
+        </a>
+        <button type="button" class="sidebar-collapse-btn" aria-label="Toggle Sidebar Collapse">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        </button>
+      </div>
+
+      <nav class="sidebar-nav">
+        <div class="sidebar-section-label">MAIN</div>
+          <a href="index.html" class="sidebar-nav-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+            <span>Dashboard</span>
+          </a>
+          <a href="batches.html" class="sidebar-nav-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+            <span>Batches</span>
+          </a>
+          <a href="attendance.html" class="sidebar-nav-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+            <span>Attendance</span>
+          </a>
+          <a href="progress-reports.html" class="sidebar-nav-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+            <span>Progress Reports</span>
+          </a>
+          <a href="payments.html" class="sidebar-nav-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg>
+            <span>Fee Payments</span>
+          </a>
+          <a href="messages.html" class="sidebar-nav-item active">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22 6 12 13 2 6"></polyline></svg>
+            <span>Messages</span>
+          </a>
+
+        <div class="sidebar-section-label">ACCOUNT</div>
+          <a href="profile.html" class="sidebar-nav-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+            <span>Profile</span>
+          </a>
+          <a href="settings.html" class="sidebar-nav-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+            <span>Settings</span>
+          </a>
+          <a href="../pages/login.html" class="sidebar-nav-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+            <span>Logout</span>
+          </a>
+      </nav>
+    </aside>
+    <div class="sidebar-overlay"></div>
+    <main class="dashboard-main">
+      <!-- Dashboard Topbar -->
+      <header class="dashboard-topbar">
+        <div class="topbar-left">
+          <button type="button" class="mobile-sidebar-btn" aria-label="Open Mobile Menu">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+          </button>
+          <div style="font-size: var(--fs-sm); font-weight: var(--fw-medium); color: var(--text-secondary);">
+            <span style="color: var(--text-tertiary);">Parent Dashboard</span> &nbsp;/&nbsp; <span style="color: var(--text-primary); font-weight: var(--fw-semibold);">Messages & PTM</span>
+          </div>
+        </div>
+
+        <div class="topbar-right">
+          <!-- Student switcher -->
+          <div class="student-switcher" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false" title="Switch Student Profile">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+            <span class="student-name">Alex Miller</span>
+            <span class="student-grade">— Grade 10</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            <div class="switcher-dropdown">
+              <a href="#" class="switcher-option active" data-student-name="Alex Miller" data-student-grade="Grade 10">
+                <span><strong>Alex Miller</strong></span>
+                <span class="badge badge-primary">Grade 10</span>
+              </a>
+              <a href="#" class="switcher-option" data-student-name="Chloe Miller" data-student-grade="Grade 6">
+                <span><strong>Chloe Miller</strong></span>
+                <span class="badge badge-outline">Grade 6</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Notification Bell -->
+          <div class="notification-btn" tabindex="0" role="button" aria-label="Notifications Dropdown">
+            <button type="button" class="btn btn-ghost btn-icon" style="position:relative;" aria-label="Notifications">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+              <span class="notification-count">3</span>
+            </button>
+            <div class="notification-dropdown">
+              <div style="padding: var(--space-2); border-bottom: 1px solid var(--border-color); display:flex; justify-content:space-between; align-items:center;">
+                <span style="font-weight: var(--fw-semibold); font-size: var(--fs-sm); color: var(--text-primary);">Notifications</span>
+                <span class="badge badge-primary">3 New</span>
+              </div>
+              <div class="notification-item">
+                <div style="width:8px; height:8px; border-radius:50%; background:var(--color-primary); margin-top:6px; flex-shrink:0;"></div>
+                <div>
+                  <p style="font-size: var(--fs-xs); font-weight: var(--fw-medium); margin-bottom:2px; color: var(--text-primary);">Term 1 PTM scheduled for Nov 23</p>
+                  <span style="font-size: 11px; color: var(--text-tertiary);">2 hours ago</span>
+                </div>
+              </div>
+              <div class="notification-item">
+                <div style="width:8px; height:8px; border-radius:50%; background:var(--color-primary); margin-top:6px; flex-shrink:0;"></div>
+                <div>
+                  <p style="font-size: var(--fs-xs); font-weight: var(--fw-medium); margin-bottom:2px; color: var(--text-primary);">Calculus test score posted: 94/100</p>
+                  <span style="font-size: 11px; color: var(--text-tertiary);">Yesterday</span>
+                </div>
+              </div>
+              <div class="notification-item">
+                <div style="width:8px; height:8px; border-radius:50%; background:var(--color-primary); margin-top:6px; flex-shrink:0;"></div>
+                <div>
+                  <p style="font-size: var(--fs-xs); font-weight: var(--fw-medium); margin-bottom:2px; color: var(--text-primary);">Fee invoice for Nov generated ($140)</p>
+                  <span style="font-size: 11px; color: var(--text-tertiary);">3 days ago</span>
+                </div>
+              </div>
+              <div style="padding: 10px; text-align: center; border-top: 1px solid var(--border-color);">
+                <a href="messages.html" style="font-size: var(--fs-xs); color: var(--color-primary); font-weight: var(--fw-semibold);">View All Messages</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- RTL Toggle -->
+          <button type="button" class="rtl-toggle-btn btn btn-ghost btn-icon" title="Toggle RTL" aria-label="Toggle RTL" style="font-family: var(--font-heading); font-weight: 700; font-size: 13px;">RTL</button>
+
+          <!-- Theme Toggle -->
+          <button type="button" class="theme-toggle-btn btn btn-ghost btn-icon" title="Toggle Color Theme" aria-label="Toggle Theme">
+            <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+          </button>
+        </div>
+      </header>
+      <div class="dashboard-content">
+        <!-- Header -->
+        <div class="dash-card reveal" style="padding: var(--space-4); margin-bottom: var(--space-3);">
+          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: var(--space-2);">
+            <div>
+              <h1 style="font-size: var(--fs-2xl); font-weight: var(--fw-bold); margin-bottom: var(--space-1);">Messages &amp; PTM Schedule</h1>
+              <p style="color: var(--text-secondary); font-size: var(--fs-sm);">Direct tutor observations, upcoming Parent-Teacher Meetings, and official center communications.</p>
+            </div>
+            <div>
+              <span class="badge badge-primary">2 Unread Messages</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Next PTM Schedule Card -->
+        <div class="dash-card reveal" style="border-left: 4px solid var(--color-primary); background: linear-gradient(135deg, rgba(29, 78, 216, 0.06) 0%, rgba(11, 15, 25, 0.02) 100%);">
+          <div class="dash-card-header">
+            <div>
+              <h2 class="dash-card-title">Next Parent-Teacher Meeting (PTM)</h2>
+              <span style="font-size: var(--fs-xs); color: var(--text-tertiary);">Mandatory Term 1 Academic Appraisal</span>
+            </div>
+            <span class="badge badge-primary">Confirmed Slot</span>
+          </div>
+          <div class="dash-card-body">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: var(--space-3); margin-bottom: var(--space-3);">
+              <div>
+                <span style="font-size: var(--fs-xs); color: var(--text-tertiary); display: block; margin-bottom: 2px;">Date &amp; Time</span>
+                <strong style="font-size: var(--fs-sm);">Saturday, Nov 23, 2024 &bull; 10:30 AM – 11:15 AM</strong>
+              </div>
+              <div>
+                <span style="font-size: var(--fs-xs); color: var(--text-tertiary); display: block; margin-bottom: 2px;">Meeting Venue</span>
+                <strong style="font-size: var(--fs-sm);">Center A — Conference Hall 2 &bull; Desk 4</strong>
+              </div>
+              <div>
+                <span style="font-size: var(--fs-xs); color: var(--text-tertiary); display: block; margin-bottom: 2px;">Attending Mentors</span>
+                <strong style="font-size: var(--fs-sm);">Dr. Robert Miller &amp; Prof. Sarah Jenkins</strong>
+              </div>
+              <div>
+                <span style="font-size: var(--fs-xs); color: var(--text-tertiary); display: block; margin-bottom: 2px;">Discussion Agenda</span>
+                <strong style="font-size: var(--fs-sm);">Calculus Mastery &amp; AP &amp; Honors Pre-Board Strategy</strong>
+              </div>
+            </div>
+            <div style="display: flex; gap: var(--space-2); flex-wrap: wrap;">
+              <button type="button" class="btn btn-primary btn-sm" onclick="alert('Attendance confirmed! We look forward to meeting you on Nov 23.');">Confirm Attendance</button>
+              <button type="button" class="btn btn-outline btn-sm" onclick="alert('Reschedule request sent to academic coordinator. You will receive an SMS with alternate slots.');">Request Reschedule</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Inbox / Message List (6 messages) -->
+        <div class="dash-card reveal">
+          <div class="dash-card-header">
+            <div>
+              <h2 class="dash-card-title">Communications Inbox</h2>
+              <span style="font-size: var(--fs-xs); color: var(--text-tertiary);">Click any message to expand and view full correspondence</span>
+            </div>
+            <span style="font-size: var(--fs-xs); color: var(--text-tertiary);">Showing 6 Messages</span>
+          </div>
+          <div class="dash-card-body" style="padding: 0;">
+            <div style="display: grid;">
+              <!-- Message 1 (Unread) -->
+              <details class="message-accordion" style="border-bottom: 1px solid var(--border-color); padding: var(--space-2) var(--space-3); cursor: pointer;" open>
+                <summary style="display: flex; justify-content: space-between; align-items: center; list-style: none; gap: var(--space-2);">
+                  <div style="display: flex; align-items: center; gap: var(--space-2);">
+                    <span style="width: 8px; height: 8px; border-radius: 50%; background-color: var(--color-primary); flex-shrink: 0;"></span>
+                    <div>
+                      <img src="../assets/images/tutors/tutor-1.jpg" alt="Dr. Robert Miller" class="testimonial-avatar" style="width: 32px; height: 32px; margin-inline-end: 8px; vertical-align: middle;"><strong style="font-size: var(--fs-sm); color: var(--text-primary);">Dr. Robert Miller (Mathematics)</strong>
+                      <div style="font-size: var(--fs-xs); color: var(--text-secondary); font-weight: var(--fw-medium);">Mid-Term Calculus Mastery &amp; Olympiad Training Recommendation</div>
+                    </div>
+                  </div>
+                  <div style="display: flex; align-items: center; gap: var(--space-2); flex-shrink: 0;">
+                    <span class="badge badge-primary">Unread</span>
+                    <span style="font-size: var(--fs-xs); color: var(--text-tertiary);">Nov 13, 2024</span>
+                  </div>
+                </summary>
+                <div style="padding-top: var(--space-2); margin-top: var(--space-2); border-top: 1px dashed var(--border-color); font-size: var(--fs-xs); color: var(--text-secondary); line-height: 1.6;">
+                  <p>Dear Mr. Robert Miller,</p>
+                  <p>I am pleased to inform you that Alex has displayed remarkable mathematical intuition in calculus and coordinate geometry during this term. His score of 94/100 reflects disciplined problem-solving.</p>
+                  <p>We are opening a specialized Saturday training batch for the Regional Mathematics Olympiad (RMO). I strongly recommend enrolling Alex in this session. The training is complimentary for our top-tier students.</p>
+                  <p>Warm regards,<br><strong>Dr. Robert Miller</strong><br>Senior Faculty in Mathematics, BrightPath Academy Tutoring</p>
+                </div>
+              </details>
+
+              <!-- Message 2 (Unread) -->
+              <details class="message-accordion" style="border-bottom: 1px solid var(--border-color); padding: var(--space-2) var(--space-3); cursor: pointer;">
+                <summary style="display: flex; justify-content: space-between; align-items: center; list-style: none; gap: var(--space-2);">
+                  <div style="display: flex; align-items: center; gap: var(--space-2);">
+                    <span style="width: 8px; height: 8px; border-radius: 50%; background-color: var(--color-primary); flex-shrink: 0;"></span>
+                    <div>
+                      <strong style="font-size: var(--fs-sm); color: var(--text-primary);">Academic Coordination Office</strong>
+                      <div style="font-size: var(--fs-xs); color: var(--text-secondary); font-weight: var(--fw-medium);">Term 1 Parent-Teacher Meeting (PTM) Invitation &amp; Room Allocations</div>
+                    </div>
+                  </div>
+                  <div style="display: flex; align-items: center; gap: var(--space-2); flex-shrink: 0;">
+                    <span class="badge badge-primary">Unread</span>
+                    <span style="font-size: var(--fs-xs); color: var(--text-tertiary);">Nov 11, 2024</span>
+                  </div>
+                </summary>
+                <div style="padding-top: var(--space-2); margin-top: var(--space-2); border-top: 1px dashed var(--border-color); font-size: var(--fs-xs); color: var(--text-secondary); line-height: 1.6;">
+                  <p>Dear Parents,</p>
+                  <p>Our official Term 1 Parent-Teacher Conference is scheduled for Saturday, November 23, 2024. Your dedicated time window with Alex's mentors is 10:30 AM to 11:15 AM at Center A, Conference Hall 2.</p>
+                  <p>Please review Alex's latest report card in your dashboard before attending so we can make our discussion focused and productive.</p>
+                  <p>Sincerely,<br><strong>Academic Coordination Team</strong></p>
+                </div>
+              </details>
+
+              <!-- Message 3 (Read) -->
+              <details class="message-accordion" style="border-bottom: 1px solid var(--border-color); padding: var(--space-2) var(--space-3); cursor: pointer;">
+                <summary style="display: flex; justify-content: space-between; align-items: center; list-style: none; gap: var(--space-2);">
+                  <div style="display: flex; align-items: center; gap: var(--space-2);">
+                    <span style="width: 8px; height: 8px; border-radius: 50%; background-color: transparent; flex-shrink: 0;"></span>
+                    <div>
+                      <strong style="font-size: var(--fs-sm); color: var(--text-primary);">Center Administration</strong>
+                      <div style="font-size: var(--fs-xs); color: var(--text-secondary);">Diwali Break Center Closure Notice &amp; Self-Study Modules</div>
+                    </div>
+                  </div>
+                  <div style="display: flex; align-items: center; gap: var(--space-2); flex-shrink: 0;">
+                    <span class="badge badge-outline">Read</span>
+                    <span style="font-size: var(--fs-xs); color: var(--text-tertiary);">Nov 01, 2024</span>
+                  </div>
+                </summary>
+                <div style="padding-top: var(--space-2); margin-top: var(--space-2); border-top: 1px dashed var(--border-color); font-size: var(--fs-xs); color: var(--text-secondary); line-height: 1.6;">
+                  <p>Dear BrightPath Academy Families,</p>
+                  <p>The learning center will remain closed on November 03 and November 04 for the festival of Diwali. Regular classroom batches resume on Tuesday, November 05, 2024.</p>
+                  <p>Festival holiday practice problem sets have been dispatched to student email portals. Wishing your family a bright and joyful celebration!</p>
+                </div>
+              </details>
+
+              <!-- Message 4 (Read) -->
+              <details class="message-accordion" style="border-bottom: 1px solid var(--border-color); padding: var(--space-2) var(--space-3); cursor: pointer;">
+                <summary style="display: flex; justify-content: space-between; align-items: center; list-style: none; gap: var(--space-2);">
+                  <div style="display: flex; align-items: center; gap: var(--space-2);">
+                    <span style="width: 8px; height: 8px; border-radius: 50%; background-color: transparent; flex-shrink: 0;"></span>
+                    <div>
+                      <strong style="font-size: var(--fs-sm); color: var(--text-primary);">Accounts &amp; Finance Desk</strong>
+                      <div style="font-size: var(--fs-xs); color: var(--text-secondary);">Tuition Fee Reminder for November 2024 (Invoice INV-2024-118)</div>
+                    </div>
+                  </div>
+                  <div style="display: flex; align-items: center; gap: var(--space-2); flex-shrink: 0;">
+                    <span class="badge badge-outline">Read</span>
+                    <span style="font-size: var(--fs-xs); color: var(--text-tertiary);">Oct 28, 2024</span>
+                  </div>
+                </summary>
+                <div style="padding-top: var(--space-2); margin-top: var(--space-2); border-top: 1px dashed var(--border-color); font-size: var(--fs-xs); color: var(--text-secondary); line-height: 1.6;">
+                  <p>Dear Mr. Robert Miller,</p>
+                  <p>This is a friendly reminder that the tuition fee for the month of November 2024 ($140) has been generated. You may settle the invoice online using UPI, Card, or Net Banking under the Fee Payments tab before the due date (Nov 25, 2024).</p>
+                  <p>Thank you for choosing BrightPath Academy.</p>
+                </div>
+              </details>
+
+              <!-- Message 5 (Read) -->
+              <details class="message-accordion" style="border-bottom: 1px solid var(--border-color); padding: var(--space-2) var(--space-3); cursor: pointer;">
+                <summary style="display: flex; justify-content: space-between; align-items: center; list-style: none; gap: var(--space-2);">
+                  <div style="display: flex; align-items: center; gap: var(--space-2);">
+                    <span style="width: 8px; height: 8px; border-radius: 50%; background-color: transparent; flex-shrink: 0;"></span>
+                    <div>
+                      <strong style="font-size: var(--fs-sm); color: var(--text-primary);">Academic Registrar</strong>
+                      <div style="font-size: var(--fs-xs); color: var(--text-secondary);">Batch Timing Adjustment for Chemistry - Room 104</div>
+                    </div>
+                  </div>
+                  <div style="display: flex; align-items: center; gap: var(--space-2); flex-shrink: 0;">
+                    <span class="badge badge-outline">Read</span>
+                    <span style="font-size: var(--fs-xs); color: var(--text-tertiary);">Oct 22, 2024</span>
+                  </div>
+                </summary>
+                <div style="padding-top: var(--space-2); margin-top: var(--space-2); border-top: 1px dashed var(--border-color); font-size: var(--fs-xs); color: var(--text-secondary); line-height: 1.6;">
+                  <p>Dear Parent,</p>
+                  <p>Please take note that beginning Monday, October 28, the Chemistry batch C10B will commence at 07:30 PM sharp in Lab 2 to allow for hands-on chemical reaction demonstrations. All other enrolled batches remain unaffected.</p>
+                  <p>Best regards,<br>Registrar Office</p>
+                </div>
+              </details>
+
+              <!-- Message 6 (Read) -->
+              <details class="message-accordion" style="padding: var(--space-2) var(--space-3); cursor: pointer;">
+                <summary style="display: flex; justify-content: space-between; align-items: center; list-style: none; gap: var(--space-2);">
+                  <div style="display: flex; align-items: center; gap: var(--space-2);">
+                    <span style="width: 8px; height: 8px; border-radius: 50%; background-color: transparent; flex-shrink: 0;"></span>
+                    <div>
+                      <strong style="font-size: var(--fs-sm); color: var(--text-primary);">Examination Controller</strong>
+                      <div style="font-size: var(--fs-xs); color: var(--text-secondary);">AP &amp; Honors Grade 10 Pre-AP Examination Series Announced</div>
+                    </div>
+                  </div>
+                  <div style="display: flex; align-items: center; gap: var(--space-2); flex-shrink: 0;">
+                    <span class="badge badge-outline">Read</span>
+                    <span style="font-size: var(--fs-xs); color: var(--text-tertiary);">Oct 15, 2024</span>
+                  </div>
+                </summary>
+                <div style="padding-top: var(--space-2); margin-top: var(--space-2); border-top: 1px dashed var(--border-color); font-size: var(--fs-xs); color: var(--text-secondary); line-height: 1.6;">
+                  <p>Dear Parents &amp; Students,</p>
+                  <p>The annual Pre-Board Mock Examination Series replicating the exact AP &amp; Honors examination pattern will be conducted from January 08 to January 22, 2025. Detailed chapter weightage distributions have been shared in class.</p>
+                  <p>Please contact the mentor team for any revision schedules.</p>
+                </div>
+              </details>
+            </div>
+          </div>
+        </div>
+        <div style="margin-top: var(--space-4); padding-top: var(--space-2); border-top: 1px solid var(--border-color); text-align: center;">
+          <p style="font-size: var(--fs-xs); color: var(--text-tertiary); font-style: italic;">* All student data shown is fictional for demonstration purposes.</p>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/dashboard.js"></script>
+</body>
+</html>

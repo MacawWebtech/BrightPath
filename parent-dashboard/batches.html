@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head><script src="../assets/js/auth-guard.js"></script>
+  <meta charset="UTF-8"><link rel="icon" type="image/svg+xml" href="../assets/images/logo/favicon.svg"><link rel="icon" type="image/png" sizes="32x32" href="../assets/images/logo/favicon-32.png"><link rel="apple-touch-icon" href="../assets/images/logo/apple-touch-icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Batch Timings — BrightPath Academy | School Tutoring Center</title>
+  <meta name="description" content="View enrolled batch schedules, weekly timetable grid, and submit batch change requests at BrightPath Academy School Tutoring Center.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/dark-mode.css">
+  <link rel="stylesheet" href="../assets/css/rtl.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+</head>
+<body>
+  <div class="dashboard-layout">
+    <!-- Dashboard Sidebar -->
+    <aside class="dashboard-sidebar" aria-label="Parent Dashboard Navigation">
+      <div class="sidebar-header">
+        <a href="index.html" class="sidebar-logo">
+          <div class="logo-icon"><img src="../assets/images/logo/logo-icon.svg" alt="" width="40" height="40"></div><span class="logo-text">BrightPath</span>
+        </a>
+        <button type="button" class="sidebar-collapse-btn" aria-label="Toggle Sidebar Collapse">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        </button>
+      </div>
+
+      <nav class="sidebar-nav">
+        <div class="sidebar-section-label">MAIN</div>
+          <a href="index.html" class="sidebar-nav-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+            <span>Dashboard</span>
+          </a>
+          <a href="batches.html" class="sidebar-nav-item active">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+            <span>Batches</span>
+          </a>
+          <a href="attendance.html" class="sidebar-nav-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+            <span>Attendance</span>
+          </a>
+          <a href="progress-reports.html" class="sidebar-nav-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+            <span>Progress Reports</span>
+          </a>
+          <a href="payments.html" class="sidebar-nav-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg>
+            <span>Fee Payments</span>
+          </a>
+          <a href="messages.html" class="sidebar-nav-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22 6 12 13 2 6"></polyline></svg>
+            <span>Messages</span>
+          </a>
+
+        <div class="sidebar-section-label">ACCOUNT</div>
+          <a href="profile.html" class="sidebar-nav-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+            <span>Profile</span>
+          </a>
+          <a href="settings.html" class="sidebar-nav-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+            <span>Settings</span>
+          </a>
+          <a href="../pages/login.html" class="sidebar-nav-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+            <span>Logout</span>
+          </a>
+      </nav>
+    </aside>
+    <div class="sidebar-overlay"></div>
+    <main class="dashboard-main">
+      <!-- Dashboard Topbar -->
+      <header class="dashboard-topbar">
+        <div class="topbar-left">
+          <button type="button" class="mobile-sidebar-btn" aria-label="Open Mobile Menu">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+          </button>
+          <div style="font-size: var(--fs-sm); font-weight: var(--fw-medium); color: var(--text-secondary);">
+            <span style="color: var(--text-tertiary);">Parent Dashboard</span> &nbsp;/&nbsp; <span style="color: var(--text-primary); font-weight: var(--fw-semibold);">Batch Timings</span>
+          </div>
+        </div>
+
+        <div class="topbar-right">
+          <!-- Student switcher -->
+          <div class="student-switcher" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false" title="Switch Student Profile">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+            <span class="student-name">Alex Miller</span>
+            <span class="student-grade">— Grade 10</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            <div class="switcher-dropdown">
+              <a href="#" class="switcher-option active" data-student-name="Alex Miller" data-student-grade="Grade 10">
+                <span><strong>Alex Miller</strong></span>
+                <span class="badge badge-primary">Grade 10</span>
+              </a>
+              <a href="#" class="switcher-option" data-student-name="Chloe Miller" data-student-grade="Grade 6">
+                <span><strong>Chloe Miller</strong></span>
+                <span class="badge badge-outline">Grade 6</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Notification Bell -->
+          <div class="notification-btn" tabindex="0" role="button" aria-label="Notifications Dropdown">
+            <button type="button" class="btn btn-ghost btn-icon" style="position:relative;" aria-label="Notifications">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+              <span class="notification-count">3</span>
+            </button>
+            <div class="notification-dropdown">
+              <div style="padding: var(--space-2); border-bottom: 1px solid var(--border-color); display:flex; justify-content:space-between; align-items:center;">
+                <span style="font-weight: var(--fw-semibold); font-size: var(--fs-sm); color: var(--text-primary);">Notifications</span>
+                <span class="badge badge-primary">3 New</span>
+              </div>
+              <div class="notification-item">
+                <div style="width:8px; height:8px; border-radius:50%; background:var(--color-primary); margin-top:6px; flex-shrink:0;"></div>
+                <div>
+                  <p style="font-size: var(--fs-xs); font-weight: var(--fw-medium); margin-bottom:2px; color: var(--text-primary);">Term 1 PTM scheduled for Nov 23</p>
+                  <span style="font-size: 11px; color: var(--text-tertiary);">2 hours ago</span>
+                </div>
+              </div>
+              <div class="notification-item">
+                <div style="width:8px; height:8px; border-radius:50%; background:var(--color-primary); margin-top:6px; flex-shrink:0;"></div>
+                <div>
+                  <p style="font-size: var(--fs-xs); font-weight: var(--fw-medium); margin-bottom:2px; color: var(--text-primary);">Calculus test score posted: 94/100</p>
+                  <span style="font-size: 11px; color: var(--text-tertiary);">Yesterday</span>
+                </div>
+              </div>
+              <div class="notification-item">
+                <div style="width:8px; height:8px; border-radius:50%; background:var(--color-primary); margin-top:6px; flex-shrink:0;"></div>
+                <div>
+                  <p style="font-size: var(--fs-xs); font-weight: var(--fw-medium); margin-bottom:2px; color: var(--text-primary);">Fee invoice for Nov generated ($140)</p>
+                  <span style="font-size: 11px; color: var(--text-tertiary);">3 days ago</span>
+                </div>
+              </div>
+              <div style="padding: 10px; text-align: center; border-top: 1px solid var(--border-color);">
+                <a href="messages.html" style="font-size: var(--fs-xs); color: var(--color-primary); font-weight: var(--fw-semibold);">View All Messages</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- RTL Toggle -->
+          <button type="button" class="rtl-toggle-btn btn btn-ghost btn-icon" title="Toggle RTL" aria-label="Toggle RTL" style="font-family: var(--font-heading); font-weight: 700; font-size: 13px;">RTL</button>
+
+          <!-- Theme Toggle -->
+          <button type="button" class="theme-toggle-btn btn btn-ghost btn-icon" title="Toggle Color Theme" aria-label="Toggle Theme">
+            <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+          </button>
+        </div>
+      </header>
+      <div class="dashboard-content">
+        <!-- Header & Action -->
+        <div class="dash-card reveal" style="padding: var(--space-4); margin-bottom: var(--space-3);">
+          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: var(--space-2);">
+            <div>
+              <h1 style="font-size: var(--fs-2xl); font-weight: var(--fw-bold); margin-bottom: var(--space-1);">Enrolled Batches &amp; Timings</h1>
+              <p style="color: var(--text-secondary); font-size: var(--fs-sm);">Active weekly tutoring schedule, timings, assigned faculty, and attendance modes for Alex Miller.</p>
+            </div>
+            <div>
+              <button type="button" class="btn btn-primary btn-sm" data-modal-open="batchChangeModal">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 6px;"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                Request Batch Change
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Enrolled Batches Table -->
+        <div class="dash-card reveal">
+          <div class="dash-card-header">
+            <div>
+              <h2 class="dash-card-title">Enrolled Batches</h2>
+              <span style="font-size: var(--fs-xs); color: var(--text-tertiary);">Grade 10 AP &amp; Honors Curriculum (5 Batches)</span>
+            </div>
+            <span class="badge badge-primary">5 Active Batches</span>
+          </div>
+          <div class="dash-card-body" style="padding: 0;">
+            <div class="table-wrapper" style="border: none; border-radius: 0;">
+              <table class="data-table data-table-cards">
+                <thead>
+                  <tr>
+                    <th>Batch Code</th>
+                    <th>Subject</th>
+                    <th>Days</th>
+                    <th>Timing</th>
+                    <th>Assigned Tutor</th>
+                    <th>Mode &amp; Location</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td data-label="Batch Code"><strong style="color: var(--color-primary); font-family: monospace;">BATCH-M10A</strong></td>
+                    <td data-label="Subject">
+                      <div style="font-weight: var(--fw-semibold);">Mathematics (Advanced AP &amp; Honors)</div>
+                      <span style="font-size: 11px; color: var(--text-tertiary);">Algebra, Calculus &amp; Geometry</span>
+                    </td>
+                    <td data-label="Days">Mon, Wed, Fri</td>
+                    <td data-label="Timing">04:00 PM – 05:30 PM</td>
+                    <td data-label="Assigned Tutor">Dr. Robert Miller</td>
+                    <td data-label="Mode &amp; Location"><span class="badge badge-outline">In-Center (Room 102)</span></td>
+                    <td data-label="Status"><span class="badge badge-primary">Active</span></td>
+                  </tr>
+                  <tr>
+                    <td data-label="Batch Code"><strong style="color: var(--color-primary); font-family: monospace;">BATCH-P10A</strong></td>
+                    <td data-label="Subject">
+                      <div style="font-weight: var(--fw-semibold);">Physics (Theory &amp; Numericals)</div>
+                      <span style="font-size: 11px; color: var(--text-tertiary);">Mechanics, Optics &amp; Electromagnetism</span>
+                    </td>
+                    <td data-label="Days">Tue, Thu, Sat</td>
+                    <td data-label="Timing">05:45 PM – 07:15 PM</td>
+                    <td data-label="Assigned Tutor">Prof. Sarah Jenkins</td>
+                    <td data-label="Mode &amp; Location"><span class="badge badge-outline">Online Live</span></td>
+                    <td data-label="Status"><span class="badge badge-primary">Active</span></td>
+                  </tr>
+                  <tr>
+                    <td data-label="Batch Code"><strong style="color: var(--color-primary); font-family: monospace;">BATCH-C10B</strong></td>
+                    <td data-label="Subject">
+                      <div style="font-weight: var(--fw-semibold);">Chemistry (Organic &amp; Physical)</div>
+                      <span style="font-size: 11px; color: var(--text-tertiary);">Reactions, Formulas &amp; Lab Work</span>
+                    </td>
+                    <td data-label="Days">Mon, Wed, Fri</td>
+                    <td data-label="Timing">07:30 PM – 09:00 PM</td>
+                    <td data-label="Assigned Tutor">Dr. Kevin Turner</td>
+                    <td data-label="Mode &amp; Location"><span class="badge badge-outline">In-Center (Lab 2)</span></td>
+                    <td data-label="Status"><span class="badge badge-primary">Active</span></td>
+                  </tr>
+                  <tr>
+                    <td data-label="Batch Code"><strong style="color: var(--color-primary); font-family: monospace;">BATCH-E10</strong></td>
+                    <td data-label="Subject">
+                      <div style="font-weight: var(--fw-semibold);">English Language &amp; Literature</div>
+                      <span style="font-size: 11px; color: var(--text-tertiary);">Grammar, Comprehension &amp; Prose</span>
+                    </td>
+                    <td data-label="Days">Saturday</td>
+                    <td data-label="Timing">10:00 AM – 11:30 AM</td>
+                    <td data-label="Assigned Tutor">Mrs. Emily Davis</td>
+                    <td data-label="Mode &amp; Location"><span class="badge badge-outline">In-Center (Room 204)</span></td>
+                    <td data-label="Status"><span class="badge badge-primary">Active</span></td>
+                  </tr>
+                  <tr>
+                    <td data-label="Batch Code"><strong style="color: var(--color-primary); font-family: monospace;">BATCH-CS10</strong></td>
+                    <td data-label="Subject">
+                      <div style="font-weight: var(--fw-semibold);">Computer Science (Python &amp; SQL)</div>
+                      <span style="font-size: 11px; color: var(--text-tertiary);">Algorithms &amp; Database Basics</span>
+                    </td>
+                    <td data-label="Days">Tue, Thu</td>
+                    <td data-label="Timing">07:30 PM – 09:00 PM</td>
+                    <td data-label="Assigned Tutor">Mr. Ethan Sen</td>
+                    <td data-label="Mode &amp; Location"><span class="badge badge-outline">Online Live</span></td>
+                    <td data-label="Status"><span class="badge badge-primary">Active</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- Weekly Timetable Grid -->
+        <div class="dash-card reveal">
+          <div class="dash-card-header">
+            <div>
+              <h2 class="dash-card-title">Weekly Timetable Grid</h2>
+              <span style="font-size: var(--fs-xs); color: var(--text-tertiary);">Visual schedule overview across Monday to Saturday</span>
+            </div>
+            <div style="display: flex; gap: var(--space-2); align-items: center; font-size: var(--fs-xs);">
+              <span style="display: inline-flex; align-items: center; gap: 4px;"><span style="width: 10px; height: 10px; border-radius: 2px; background: var(--color-primary);"></span> Scheduled Class</span>
+              <span style="display: inline-flex; align-items: center; gap: 4px;"><span style="width: 10px; height: 10px; border-radius: 2px; background: var(--border-color);"></span> Free Slot</span>
+            </div>
+          </div>
+          <div class="dash-card-body">
+            <div class="timetable">
+              <!-- Header Row -->
+              <div class="timetable-header">Time Slot</div>
+              <div class="timetable-header">Mon</div>
+              <div class="timetable-header">Tue</div>
+              <div class="timetable-header">Wed</div>
+              <div class="timetable-header">Thu</div>
+              <div class="timetable-header">Fri</div>
+              <div class="timetable-header">Sat</div>
+
+              <!-- Slot 1: 10:00 AM - 11:30 AM -->
+              <div class="timetable-time">10:00 – 11:30</div>
+              <div class="timetable-cell"></div>
+              <div class="timetable-cell"></div>
+              <div class="timetable-cell"></div>
+              <div class="timetable-cell"></div>
+              <div class="timetable-cell"></div>
+              <div class="timetable-cell">
+                <div class="timetable-class">
+                  <strong>English Lit</strong><br>
+                  <span style="font-size: 11px;">10:00 - 11:30 &bull; Room 204</span>
+                </div>
+              </div>
+
+              <!-- Slot 2: 04:00 PM - 05:30 PM -->
+              <div class="timetable-time">16:00 – 17:30</div>
+              <div class="timetable-cell">
+                <div class="timetable-class">
+                  <strong>Mathematics</strong><br>
+                  <span style="font-size: 11px;">16:00 - 17:30 &bull; Room 102</span>
+                </div>
+              </div>
+              <div class="timetable-cell"></div>
+              <div class="timetable-cell">
+                <div class="timetable-class">
+                  <strong>Mathematics</strong><br>
+                  <span style="font-size: 11px;">16:00 - 17:30 &bull; Room 102</span>
+                </div>
+              </div>
+              <div class="timetable-cell"></div>
+              <div class="timetable-cell">
+                <div class="timetable-class">
+                  <strong>Mathematics</strong><br>
+                  <span style="font-size: 11px;">16:00 - 17:30 &bull; Room 102</span>
+                </div>
+              </div>
+              <div class="timetable-cell"></div>
+
+              <!-- Slot 3: 05:45 PM - 07:15 PM -->
+              <div class="timetable-time">17:45 – 19:15</div>
+              <div class="timetable-cell"></div>
+              <div class="timetable-cell">
+                <div class="timetable-class">
+                  <strong>Physics Live</strong><br>
+                  <span style="font-size: 11px;">17:45 - 19:15 &bull; Online</span>
+                </div>
+              </div>
+              <div class="timetable-cell"></div>
+              <div class="timetable-cell">
+                <div class="timetable-class">
+                  <strong>Physics Live</strong><br>
+                  <span style="font-size: 11px;">17:45 - 19:15 &bull; Online</span>
+                </div>
+              </div>
+              <div class="timetable-cell"></div>
+              <div class="timetable-cell">
+                <div class="timetable-class">
+                  <strong>Physics Live</strong><br>
+                  <span style="font-size: 11px;">17:45 - 19:15 &bull; Online</span>
+                </div>
+              </div>
+
+              <!-- Slot 4: 07:30 PM - 09:00 PM -->
+              <div class="timetable-time">19:30 – 21:00</div>
+              <div class="timetable-cell">
+                <div class="timetable-class">
+                  <strong>Chemistry</strong><br>
+                  <span style="font-size: 11px;">19:30 - 21:00 &bull; Lab 2</span>
+                </div>
+              </div>
+              <div class="timetable-cell">
+                <div class="timetable-class">
+                  <strong>Comp Sci</strong><br>
+                  <span style="font-size: 11px;">19:30 - 21:00 &bull; Online</span>
+                </div>
+              </div>
+              <div class="timetable-cell">
+                <div class="timetable-class">
+                  <strong>Chemistry</strong><br>
+                  <span style="font-size: 11px;">19:30 - 21:00 &bull; Lab 2</span>
+                </div>
+              </div>
+              <div class="timetable-cell">
+                <div class="timetable-class">
+                  <strong>Comp Sci</strong><br>
+                  <span style="font-size: 11px;">19:30 - 21:00 &bull; Online</span>
+                </div>
+              </div>
+              <div class="timetable-cell">
+                <div class="timetable-class">
+                  <strong>Chemistry</strong><br>
+                  <span style="font-size: 11px;">19:30 - 21:00 &bull; Lab 2</span>
+                </div>
+              </div>
+              <div class="timetable-cell"></div>
+            </div>
+            <div class="timetable-days" aria-label="Weekly timetable by day"><div class="timetable-day"><h3 class="timetable-day-title">Monday</h3><div class="timetable-day-item"><span class="tdi-time">16:00 &ndash; 17:30</span><div><strong>Mathematics</strong><span class="tdi-meta">Room 102</span></div></div><div class="timetable-day-item"><span class="tdi-time">19:30 &ndash; 21:00</span><div><strong>Chemistry</strong><span class="tdi-meta">Lab 2</span></div></div></div><div class="timetable-day"><h3 class="timetable-day-title">Tuesday</h3><div class="timetable-day-item"><span class="tdi-time">17:45 &ndash; 19:15</span><div><strong>Physics Live</strong><span class="tdi-meta">Online</span></div></div><div class="timetable-day-item"><span class="tdi-time">19:30 &ndash; 21:00</span><div><strong>Comp Sci</strong><span class="tdi-meta">Online</span></div></div></div><div class="timetable-day"><h3 class="timetable-day-title">Wednesday</h3><div class="timetable-day-item"><span class="tdi-time">16:00 &ndash; 17:30</span><div><strong>Mathematics</strong><span class="tdi-meta">Room 102</span></div></div><div class="timetable-day-item"><span class="tdi-time">19:30 &ndash; 21:00</span><div><strong>Chemistry</strong><span class="tdi-meta">Lab 2</span></div></div></div><div class="timetable-day"><h3 class="timetable-day-title">Thursday</h3><div class="timetable-day-item"><span class="tdi-time">17:45 &ndash; 19:15</span><div><strong>Physics Live</strong><span class="tdi-meta">Online</span></div></div><div class="timetable-day-item"><span class="tdi-time">19:30 &ndash; 21:00</span><div><strong>Comp Sci</strong><span class="tdi-meta">Online</span></div></div></div><div class="timetable-day"><h3 class="timetable-day-title">Friday</h3><div class="timetable-day-item"><span class="tdi-time">16:00 &ndash; 17:30</span><div><strong>Mathematics</strong><span class="tdi-meta">Room 102</span></div></div><div class="timetable-day-item"><span class="tdi-time">19:30 &ndash; 21:00</span><div><strong>Chemistry</strong><span class="tdi-meta">Lab 2</span></div></div></div><div class="timetable-day"><h3 class="timetable-day-title">Saturday</h3><div class="timetable-day-item"><span class="tdi-time">10:00 &ndash; 11:30</span><div><strong>English Lit</strong><span class="tdi-meta">Room 204</span></div></div><div class="timetable-day-item"><span class="tdi-time">17:45 &ndash; 19:15</span><div><strong>Physics Live</strong><span class="tdi-meta">Online</span></div></div></div></div>
+          </div>
+        </div>
+        <div style="margin-top: var(--space-4); padding-top: var(--space-2); border-top: 1px solid var(--border-color); text-align: center;">
+          <p style="font-size: var(--fs-xs); color: var(--text-tertiary); font-style: italic;">* All student data shown is fictional for demonstration purposes.</p>
+        </div>
+      </div>
+    </main>
+  </div>
+  <!-- Batch Change Modal -->
+  <div class="modal-overlay" id="batchChangeModal" role="dialog" aria-modal="true" aria-labelledby="batchChangeTitle">
+    <div class="modal">
+      <div class="modal-header">
+        <h3 class="modal-title" id="batchChangeTitle">Request Batch Change</h3>
+        <button type="button" class="modal-close" data-modal-close aria-label="Close modal">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+      <form class="batch-change-form">
+        <div class="modal-body">
+          <p style="font-size: var(--fs-xs); color: var(--text-secondary); margin-bottom: var(--space-3);">Submit a request to switch your student's batch timing. Our academic coordinator will evaluate seat availability and respond within 24–48 hours.</p>
+          
+          <div class="form-group">
+            <label class="form-label" for="currentBatchSelect">Current Batch *</label>
+            <select id="currentBatchSelect" name="current-batch" class="form-select" required>
+              <option value="" disabled selected>Select Current Batch</option>
+              <option value="BATCH-M10A">BATCH-M10A: Mathematics (Mon, Wed, Fri 04:00 PM)</option>
+              <option value="BATCH-P10A">BATCH-P10A: Physics (Tue, Thu, Sat 05:45 PM)</option>
+              <option value="BATCH-C10B">BATCH-C10B: Chemistry (Mon, Wed, Fri 07:30 PM)</option>
+              <option value="BATCH-E10">BATCH-E10: English Literature (Sat 10:00 AM)</option>
+              <option value="BATCH-CS10">BATCH-CS10: Computer Science (Tue, Thu 07:30 PM)</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="preferredTimingSelect">Preferred New Timing *</label>
+            <select id="preferredTimingSelect" name="preferred-timing" class="form-select" required>
+              <option value="" disabled selected>Select Preferred Slot</option>
+              <option value="Morning: 09:00 AM – 10:30 AM (Weekend Batch)">Morning: 09:00 AM – 10:30 AM (Weekend Batch)</option>
+              <option value="Early Evening: 03:00 PM – 04:30 PM (Mon, Wed, Fri)">Early Evening: 03:00 PM – 04:30 PM (Mon, Wed, Fri)</option>
+              <option value="Evening: 06:00 PM – 07:30 PM (Tue, Thu, Sat)">Evening: 06:00 PM – 07:30 PM (Tue, Thu, Sat)</option>
+              <option value="Switch to 100% Online Live Interactive Batch">Switch to 100% Online Live Interactive Batch</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="changeReason">Reason for Request *</label>
+            <textarea id="changeReason" name="reason" class="form-textarea" placeholder="Please describe school schedule conflicts, travel constraints, or other reasons..." required></textarea>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-ghost" data-modal-close>Cancel</button>
+          <button type="submit" class="btn btn-primary">Submit Request</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/dashboard.js"></script>
+</body>
+</html>

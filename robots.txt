@@ -1,0 +1,11 @@
+# BrightPath Academy — School Tutoring Center Template
+# robots.txt
+
+User-agent: *
+Allow: /pages/
+Allow: /documentation/
+Disallow: /parent-dashboard/
+Disallow: /assets/js/
+Disallow: /assets/fonts/
+
+Sitemap: https://www.example.com/sitemap.xml

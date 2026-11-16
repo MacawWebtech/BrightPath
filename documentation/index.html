@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8"><link rel="icon" type="image/svg+xml" href="../assets/images/logo/favicon.svg"><link rel="icon" type="image/png" sizes="32x32" href="../assets/images/logo/favicon-32.png"><link rel="apple-touch-icon" href="../assets/images/logo/apple-touch-icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Documentation — BrightPath Academy | School Tutoring Center &amp; Academic Coaching HTML Template</title>
+  <meta name="description" content="Comprehensive technical documentation, architecture guide, design system rules, and customization handbook for BrightPath Academy HTML Template.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/dark-mode.css">
+  <link rel="stylesheet" href="../assets/css/rtl.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+  <style>
+    .doc-layout {
+      display: flex;
+      min-height: 100vh;
+    }
+    .doc-sidebar {
+      width: 280px;
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      background-color: var(--bg-card);
+      border-right: 1px solid var(--border-color);
+      overflow-y: auto;
+      padding: var(--space-4) var(--space-3);
+      z-index: var(--z-sticky);
+    }
+    [dir="rtl"] .doc-sidebar {
+      left: auto;
+      right: 0;
+      border-right: none;
+      border-left: 1px solid var(--border-color);
+    }
+    .doc-main {
+      margin-left: 280px;
+      flex: 1;
+      padding: var(--space-6) var(--padding-x) var(--space-10);
+      max-width: 1080px;
+    }
+    [dir="rtl"] .doc-main {
+      margin-left: 0;
+      margin-right: 280px;
+    }
+    .doc-nav-list {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      margin-top: var(--space-2);
+    }
+    .doc-nav-link {
+      padding: 8px 12px;
+      border-radius: var(--border-radius-sm);
+      font-size: var(--fs-sm);
+      font-weight: var(--fw-medium);
+      color: var(--text-secondary);
+      transition: all var(--transition-fast);
+      display: block;
+    }
+    .doc-nav-link:hover, .doc-nav-link.active {
+      color: var(--color-primary);
+      background-color: var(--color-primary-light);
+    }
+    .doc-section-title {
+      font-size: var(--fs-xs);
+      font-weight: var(--fw-bold);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--text-tertiary);
+      margin-top: var(--space-3);
+      margin-bottom: var(--space-1);
+      padding-inline: 12px;
+    }
+    .code-box {
+      background-color: var(--bg-input);
+      border: 1px solid var(--border-color);
+      border-radius: var(--border-radius-md);
+      padding: var(--space-3);
+      font-family: 'Courier New', Courier, monospace;
+      font-size: var(--fs-sm);
+      overflow-x: auto;
+      margin-block: var(--space-2);
+      color: var(--text-primary);
+    }
+    .color-swatch-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-3);
+      margin-block: var(--space-3);
+    }
+    .color-swatch {
+      border: 1px solid var(--border-color);
+      border-radius: var(--border-radius-md);
+      overflow: hidden;
+      background-color: var(--bg-card);
+    }
+    .color-preview {
+      height: 72px;
+      width: 100%;
+    }
+    .color-info {
+      padding: var(--space-2);
+      font-size: var(--fs-xs);
+    }
+    .color-name {
+      font-weight: var(--fw-bold);
+      font-size: var(--fs-sm);
+      margin-bottom: 2px;
+    }
+    @media (max-width: 1023px) {
+      .doc-sidebar {
+        display: none;
+      }
+      .doc-main {
+        margin-left: 0;
+        margin-right: 0;
+        padding-inline: var(--padding-x);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="doc-layout">
+    <!-- Sidebar -->
+    <aside class="doc-sidebar">
+      <a href="../pages/index.html" class="header-logo" style="margin-bottom: var(--space-3);">
+        <div class="logo-icon"><img src="../assets/images/logo/logo-icon.svg" alt="" width="40" height="40"></div>
+        <span class="logo-text">BrightPath</span>
+      </a>
+      <div style="font-size: var(--fs-xs); color: var(--text-tertiary); padding-inline: 4px; margin-bottom: var(--space-2);">Template v1.0 Documentation</div>
+
+      <div class="flex gap-1" style="margin-bottom: var(--space-3);">
+        <button class="btn btn-outline btn-sm w-full theme-toggle-btn" aria-label="Toggle Theme">Toggle Theme</button>
+        <button class="btn btn-outline btn-sm w-full rtl-toggle-btn" aria-label="Toggle RTL">RTL</button>
+      </div>
+
+      <nav>
+        <div class="doc-section-title">Getting Started</div>
+        <div class="doc-nav-list">
+          <a href="#overview" class="doc-nav-link active">1. Project Overview</a>
+          <a href="#file-structure" class="doc-nav-link">2. File Structure</a>
+          <a href="#design-system" class="doc-nav-link">3. Strict Design System</a>
+        </div>
+
+        <div class="doc-section-title">Page Guides</div>
+        <div class="doc-nav-list">
+          <a href="#public-pages" class="doc-nav-link">4. Public Pages (19)</a>
+          <a href="#parent-dashboard" class="doc-nav-link">5. Parent Dashboard (8)</a>
+        </div>
+
+        <div class="doc-section-title">Interactive JS Modules</div>
+        <div class="doc-nav-list">
+          <a href="#js-architecture" class="doc-nav-link">7. JavaScript Architecture</a>
+          <a href="#booking-wizard" class="doc-nav-link">8. 7-Step Booking Wizard</a>
+          <a href="#theme-rtl" class="doc-nav-link">9. Dark Mode &amp; RTL Engine</a>
+        </div>
+
+        <div class="doc-section-title">Customization</div>
+        <div class="doc-nav-list">
+          <a href="#customization" class="doc-nav-link">10. Customization Guide</a>
+          <a href="#deployment" class="doc-nav-link">11. Deployment &amp; Support</a>
+        </div>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="doc-main">
+      <div class="flex-between" style="margin-bottom: var(--space-4);">
+        <div>
+          <span class="badge badge-primary">Developer &amp; Buyer Handbook</span>
+          <h1 style="margin-top: 8px; margin-bottom: 8px;">BrightPath Academy HTML5 Template Documentation</h1>
+          <p>School Tutoring Center &amp; Academic Coaching Commercial Multipurpose Template.</p>
+        </div>
+        <div>
+          <a href="../pages/index.html" class="btn btn-primary btn-sm">Live Demo Site &rarr;</a>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- 1. Overview -->
+      <section id="overview" class="section" style="padding-block: var(--space-4);">
+        <h2>1. Project Overview</h2>
+        <p><strong>BrightPath Academy</strong> is a production-grade, zero-truncation, multi-role commercial website template crafted for academic tutoring institutes, K-12 coaching centers, standardized exam test-prep hubs, and private educational academies.</p>
+        <p>The design synthesizes supportive academic mentorship with structured, grade-wise course discovery matrices.</p>
+
+        <div class="card-grid card-grid-3" style="margin-top: var(--space-3);">
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">19 Public Pages</h4>
+              <p class="card-text">2 distinct Homepages, Subject Catalog, Tutor Directory, Batch Timetable, Blog with detail page, Fee Calculator, and Full Authentication Suite.</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">Parent Dashboard</h4>
+              <p class="card-text">Dedicated portal for parents tracking student attendance %, test reports, weekly timetables, online fee invoices, and printable payment receipts.</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">Admin Dashboard</h4>
+              <p class="card-text">Comprehensive administrative back-office managing students, faculty load, batch capacities, free demo approvals, and fee collections.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="divider"></div>
+
+      <!-- 2. File Structure -->
+      <section id="file-structure" class="section" style="padding-block: var(--space-4);">
+        <h2>2. Complete File Directory Tree</h2>
+        <div class="code-box">
+brightpath-tutoring-template/
+├── assets/
+│   ├── css/
+│   │   ├── style.css          # Design system, 3-color palette, 2 fonts, 30px padding, components
+│   │   ├── dark-mode.css      # Dark mode variable overrides and high-contrast rules
+│   │   ├── rtl.css            # RTL layout mirroring with CSS logical properties
+│   │   └── responsive.css     # Mobile (&lt;640px), Tablet (640-1023px), Desktop (1024px+)
+│   ├── js/
+│   │   ├── main.js            # Theme toggle, RTL toggle, mobile drawer, accordions, validation
+│   │   ├── catalog.js         # Grade tabs, multi-filter catalog, blog live search, fee toggles
+│   │   ├── booking.js         # 7-step demo &amp; batch booking wizard + session confirmation
+│   │   └── dashboard.js       # Parent dashboard interactions, attendance sheets, receipts, modals
+│   ├── images/                # Organized asset folders (home, subjects, tutors, blog, about)
+│   └── fonts/                 # Optional self-hosted webfont assets
+├── pages/
+│   ├── index.html             # Home 1: Supportive Academic Tutoring Center (Supportive Academic)
+│   ├── index-2.html           # Home 2: Structured Course &amp; Exam Prep Hub (Course & Exam Prep Hub)
+│   ├── about.html             # Institute story, milestones timeline, campus facilities
+│   ├── subjects.html          # Subjects catalog with live grade &amp; domain filtering
+│   ├── subject-details.html   # Subject syllabus, lead faculty, batch schedules
+│   ├── tutors.html            # Faculty directory with multi-filter search
+│   ├── tutor-details.html     # Faculty bio, timetable, and trial booking
+│   ├── batch-timings.html     # Timetable table + 7-Step Interactive Booking Wizard
+│   ├── booking-confirmation.html # Printable demo confirmation pass with reference ID
+│   ├── pricing.html           # Grade fee tiers, Monthly/Quarterly/Annual toggles
+│   ├── blog.html              # Study resources, live search &amp; category pills
+│   ├── blog-details.html      # 500-word study article with auto-generated TOC
+│   ├── contact.html           # Inquiry form, working hours, campus maps placeholder
+│   ├── login.html             # Parent login, routes to the parent dashboard
+│   ├── register.html          # Full student &amp; parent registration with validation
+│   ├── forgot-password.html   # Password recovery flow
+│   ├── reset-password.html    # Password reset interface
+│   ├── privacy.html           # Student &amp; parent privacy policy
+│   ├── terms.html             # Enrollment terms &amp; fee policies
+│   ├── 404.html               # Page not found error screen
+│   ├── coming-soon.html       # Launch countdown &amp; newsletter
+│   └── maintenance.html       # Scheduled maintenance notice
+├── parent-dashboard/
+│   ├── index.html             # KPI summary, student switcher, today's schedule
+│   ├── batches.html           # Enrolled classes, timetable grid, batch change modal
+│   ├── attendance.html        # Subject attendance progress bars, absence reporting
+│   ├── progress-reports.html  # Scorecard table, performance chart, printable report card
+│   ├── payments.html          # Invoices, Stripe/UPI checkout modal, printable fee receipts
+│   ├── messages.html          # Tutor feedback inbox, PTM schedules, notices
+│   ├── profile.html           # Academic record &amp; parent emergency contact details
+│   └── settings.html          # Password security, SMS/Email alert toggles
+├── documentation/
+│   └── index.html             # Complete buyer &amp; developer technical handbook (this file)
+├── README.md                  # Quickstart guide &amp; repository details
+├── sitemap.xml                # Search engine sitemap index
+└── robots.txt                 # Search engine crawler policies
+        </div>
+      </section>
+
+      <div class="divider"></div>
+
+      <!-- 3. Strict Design System -->
+      <section id="design-system" class="section" style="padding-block: var(--space-4);">
+        <h2>3. Strict Architectural Rules &amp; Design System</h2>
+
+        <h3>3.1 Three-Color Rule</h3>
+        <p>The entire template rigorously restricts its palette to <strong>only three core colors</strong>. No secondary greens, oranges, or purples are introduced. All state changes, hover effects, and tints are derived via opacity and tone scales of these three hues:</p>
+
+        <div class="color-swatch-grid">
+          <div class="color-swatch">
+            <div class="color-preview" style="background-color: #0B0F19;"></div>
+            <div class="color-info">
+              <div class="color-name">1. Pure Black</div>
+              <code>#0B0F19</code>
+              <p style="margin:4px 0 0; color:var(--text-tertiary);">Primary dark ink, dark-mode body surface, headings.</p>
+            </div>
+          </div>
+          <div class="color-swatch">
+            <div class="color-preview" style="background-color: #FFFFFF; border-bottom: 1px solid var(--border-color);"></div>
+            <div class="color-info">
+              <div class="color-name">2. Crisp White</div>
+              <code>#FFFFFF</code>
+              <p style="margin:4px 0 0; color:var(--text-tertiary);">Primary light surface, dark-mode typography, clean cards.</p>
+            </div>
+          </div>
+          <div class="color-swatch">
+            <div class="color-preview" style="background-color: #1D4ED8;"></div>
+            <div class="color-info">
+              <div class="color-name">3. Academic Cobalt Blue</div>
+              <code>#1D4ED8</code>
+              <p style="margin:4px 0 0; color:var(--text-tertiary);">Primary CTA buttons, active tabs, grade badges, brand focus.</p>
+            </div>
+          </div>
+        </div>
+
+        <h3>3.2 Two-Font Rule</h3>
+        <ul style="list-style: disc; padding-inline-start: 24px; color: var(--text-secondary); margin-bottom: var(--space-3);">
+          <li><strong>Headings:</strong> <code>Plus Jakarta Sans</code> (Weights: 600, 700, 800) applied to <code>h1</code>&ndash;<code>h6</code>, hero headlines, and stat values.</li>
+          <li><strong>Body &amp; UI:</strong> <code>Inter</code> (Weights: 400, 500, 600) applied to paragraphs, buttons, navigation, data tables, and input fields.</li>
+        </ul>
+
+        <h3>3.3 30px Global Padding &amp; 8px Spacing Scale</h3>
+        <p>Across desktop (&ge;1024px) and tablet (640&ndash;1023px) viewports, all content maintains <code>padding-left: 30px; padding-right: 30px;</code> (variable <code>--padding-x: 30px</code>). On mobile viewports (&lt;640px), padding smoothly adjusts to <code>16px</code> with zero horizontal overflow.</p>
+
+        <h3>3.4 Equal-Height Cards Architecture</h3>
+        <p>Every card row is governed by CSS Grid and Flexbox: <code>grid-auto-rows: 1fr</code> combined with <code>.card { display: flex; flex-direction: column; }</code> and <code>.card-footer { margin-top: auto; }</code> ensures cards in the same row share identical heights and horizontal CTA alignments.</p>
+      </section>
+
+      <div class="divider"></div>
+
+      <!-- 4. Public Pages -->
+      <section id="public-pages" class="section" style="padding-block: var(--space-4);">
+        <h2>4. Public Website Pages Guide (19 Pages)</h2>
+        <div class="table-wrapper">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Page File</th>
+                <th>Layout Philosophy</th>
+                <th>Key Components</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>pages/index.html</code></td>
+                <td>Supportive Academic Tutoring Center</td>
+                <td>Quick grade pills, trust indicators, small-batch philosophy, 12-batch subject offerings, tutor carousel, inline demo booking, testimonials.</td>
+              </tr>
+              <tr>
+                <td><code>pages/index-2.html</code></td>
+                <td>Structured Course & Exam Prep Hub</td>
+                <td>Interactive grade selector in hero, AP &amp; Honors/IB &amp; College Prep board batch cards, 4-step mastery loop, achiever scorecards, tuition comparison table.</td>
+              </tr>
+              <tr>
+                <td><code>pages/about.html</code></td>
+                <td>Institutional story</td>
+                <td>2009-2024 academic milestone timeline, hiring standards, mission/vision, smart classrooms and laboratory showcase.</td>
+              </tr>
+              <tr>
+                <td><code>pages/subjects.html</code></td>
+                <td>Filterable catalog</td>
+                <td>Client-side multi-filter by Grade (1-5, 6-8, 9-10, 11-12) and Domain (Math, Science, English, Coding, Commerce).</td>
+              </tr>
+              <tr>
+                <td><code>pages/subject-details.html</code></td>
+                <td>Single subject syllabus</td>
+                <td>Term-wise expandable curriculum accordion, live batch timetable, assigned lead faculty card, and customizable fee summary.</td>
+              </tr>
+              <tr>
+                <td><code>pages/tutors.html</code></td>
+                <td>Faculty directory</td>
+                <td>Live search by subject, qualification badges (M.Sc., Ph.D., B.Ed.), teaching experience, and trial session CTAs.</td>
+              </tr>
+              <tr>
+                <td><code>pages/batch-timings.html</code></td>
+                <td>Timetable &amp; Enrollment</td>
+                <td>Filterable master batch timetable + full 7-Step Interactive Booking Wizard with live validation.</td>
+              </tr>
+              <tr>
+                <td><code>pages/pricing.html</code></td>
+                <td>Tuition fee tiers</td>
+                <td>Monthly / Quarterly / Annual dynamic switch, bundle comparison, sibling scholarship terms.</td>
+              </tr>
+              <tr>
+                <td><code>pages/blog.html</code></td>
+                <td>Study resources</td>
+                <td>Live search filter, category pills, equal-height article cards, and pagination.</td>
+              </tr>
+              <tr>
+                <td><code>pages/blog-details.html</code></td>
+                <td>In-depth study guide</td>
+                <td>Auto-generating Table of Contents, 500-word exam prep guide, social share, related posts.</td>
+              </tr>
+              <tr>
+                <td><code>pages/contact.html</code></td>
+                <td>Center assistance</td>
+                <td>Working hours, validated inquiry form, maps placeholder, direct WhatsApp contact.</td>
+              </tr>
+              <tr>
+                <td><code>pages/login.html</code></td>
+                <td>Role-based authentication</td>
+                <td>Parent Portal sign-in with form validation; the dashboard is only reachable after signing in.</td>
+              </tr>
+              <tr>
+                <td><code>pages/register.html</code></td>
+                <td>Student onboarding</td>
+                <td>Parent &amp; student academic registration form with validation and grade selection.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <div class="divider"></div>
+
+      <!-- 5. Parent Dashboard -->
+      <section id="parent-dashboard" class="section" style="padding-block: var(--space-4);">
+        <h2>5. Parent Portal Dashboard (8 Pages)</h2>
+        <p>A supportive, intuitive monitoring console located in <code>parent-dashboard/</code> where parents oversee their child's academic progress.</p>
+        <ul style="list-style: disc; padding-inline-start: 24px; color: var(--text-secondary); margin-bottom: var(--space-3);">
+          <li><strong>Student Switcher:</strong> Switch between siblings in one click (e.g., <em>Alex Miller &mdash; Grade 10</em> and <em>Chloe Miller &mdash; Grade 6</em>) with automatic context updates.</li>
+          <li><strong>Real-Time Attendance:</strong> Subject-wise percentage bars and an interactive "Report Absence" modal form.</li>
+          <li><strong>Scorecards &amp; Progress:</strong> Filterable mock test result logs, performance charts, and printable Official Report Card modals.</li>
+          <li><strong>Fee Payment Receipts:</strong> Pending invoice checkout with dummy gateway integration and downloadable, printable payment receipts.</li>
+        </ul>
+      </section>
+
+      <div class="divider"></div>
+
+
+      <div class="divider"></div>
+
+      <!-- 7. Booking Wizard -->
+      <section id="booking-wizard" class="section" style="padding-block: var(--space-4);">
+        <h2>7. The 7-Step Interactive Booking Wizard</h2>
+        <p>Implemented in <code>assets/js/booking.js</code> and embedded within <code>pages/batch-timings.html</code>:</p>
+        <ol style="list-style: decimal; padding-inline-start: 24px; color: var(--text-secondary); line-height: 1.8;">
+          <li><strong>Step 1:</strong> Select Grade Level &amp; Core Subject</li>
+          <li><strong>Step 2:</strong> Choose Batch Timing or Free Demo Option</li>
+          <li><strong>Step 3:</strong> Select Preferred Subject Tutor</li>
+          <li><strong>Step 4:</strong> Pick Available Date &amp; Interactive Time Slot</li>
+          <li><strong>Step 5:</strong> Enter Student &amp; Parent Details (validated live)</li>
+          <li><strong>Step 6:</strong> Review Consolidated Summary</li>
+          <li><strong>Step 7:</strong> Confirm Booking &rarr; Generates unique Reference ID (e.g., <code>STK-XXXX</code>) and navigates to <code>booking-confirmation.html</code></li>
+        </ol>
+      </section>
+
+      <div class="divider"></div>
+
+      <!-- 8. Theme & RTL -->
+      <section id="theme-rtl" class="section" style="padding-block: var(--space-4);">
+        <h2>8. Dark Mode &amp; RTL Engine</h2>
+        <p>Toggle controls are available on every page header, mobile drawer, and dashboard topbar:</p>
+        <div class="code-box">
+// Dark Mode: Toggle data-theme attribute on root &lt;html&gt;
+document.documentElement.setAttribute('data-theme', 'dark'); // or 'light'
+localStorage.setItem('brightpath-theme', 'dark');
+
+// RTL Engine: Toggle dir and lang attributes
+document.documentElement.setAttribute('dir', 'rtl');
+document.documentElement.setAttribute('lang', 'ar');
+localStorage.setItem('brightpath-rtl', 'true');
+        </div>
+      </section>
+
+      <div class="divider"></div>
+
+      <!-- 9. Customization -->
+      <section id="customization" class="section" style="padding-block: var(--space-4);">
+        <h2>9. Customization Guide</h2>
+        <h3>Changing the Primary Brand Color</h3>
+        <p>To rebrand BrightPath Academy, open <code>assets/css/style.css</code> and update the <code>:root</code> custom properties:</p>
+        <div class="code-box">
+:root {
+  --color-primary: #1D4ED8;        /* Replace with your institute's primary color */
+  --color-primary-hover: #1E40AF;  /* Lighter/Darker shade of primary */
+  --color-black: #0B0F19;          /* Neutral dark base */
+  --color-white: #FFFFFF;          /* Neutral light base */
+}
+        </div>
+      </section>
+
+      <div class="divider"></div>
+
+      <!-- 10. Deployment -->
+      <section id="deployment" class="section" style="padding-block: var(--space-4);">
+        <h2>10. Deployment &amp; Commercial Standards</h2>
+        <p>BrightPath Academy is 100% static, requires zero build tools or compilers, and is compatible with GitHub Pages, Cloudflare Pages, Netlify, Vercel, Apache, or Nginx servers. Simply upload the project root to your web host.</p>
+        <p style="margin-top: var(--space-3); color: var(--text-tertiary); font-size: var(--fs-xs);">&copy; 2024 BrightPath Academy. Commercial HTML5 Template. Engineered to WCAG 2.1 AA specifications.</p>
+      </section>
+    </main>
+  </div>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

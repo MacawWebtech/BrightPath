@@ -1,0 +1,36 @@
+/* ============================================================
+   BRIGHTPATH ACADEMY — Dedicated Dashboard Stylesheet
+   Imports core variables, utility classes, and layout rules
+   ============================================================ */
+
+@import url('style.css');
+
+/* Dashboard Specific Layout Enhancements */
+.dashboard-page {
+  background-color: var(--bg-surface);
+  min-height: 100vh;
+}
+
+.dashboard-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.dashboard-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow-x: hidden;
+}
+
+.dashboard-content-area {
+  flex: 1;
+  padding: var(--space-4);
+}
+
+@media (max-width: 768px) {
+  .dashboard-content-area {
+    padding: var(--space-3) var(--space-2);
+  }
+}

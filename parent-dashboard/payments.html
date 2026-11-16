@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head><script src="../assets/js/auth-guard.js"></script>
+  <meta charset="UTF-8"><link rel="icon" type="image/svg+xml" href="../assets/images/logo/favicon.svg"><link rel="icon" type="image/png" sizes="32x32" href="../assets/images/logo/favicon-32.png"><link rel="apple-touch-icon" href="../assets/images/logo/apple-touch-icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fee Payments & Receipts — BrightPath Academy | School Tutoring Center</title>
+  <meta name="description" content="Review tuition invoices, fee status, past receipts, and make secure online fee payments at BrightPath Academy School Tutoring Center.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/dark-mode.css">
+  <link rel="stylesheet" href="../assets/css/rtl.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+</head>
+<body>
+  <div class="dashboard-layout">
+    <!-- Dashboard Sidebar -->
+    <aside class="dashboard-sidebar" aria-label="Parent Dashboard Navigation">
+      <div class="sidebar-header">
+        <a href="index.html" class="sidebar-logo">
+          <div class="logo-icon"><img src="../assets/images/logo/logo-icon.svg" alt="" width="40" height="40"></div><span class="logo-text">BrightPath</span>
+        </a>
+        <button type="button" class="sidebar-collapse-btn" aria-label="Toggle Sidebar Collapse">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        </button>
+      </div>
+
+      <nav class="sidebar-nav">
+        <div class="sidebar-section-label">MAIN</div>
+          <a href="index.html" class="sidebar-nav-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+            <span>Dashboard</span>
+          </a>
+          <a href="batches.html" class="sidebar-nav-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+            <span>Batches</span>
+          </a>
+          <a href="attendance.html" class="sidebar-nav-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+            <span>Attendance</span>
+          </a>
+          <a href="progress-reports.html" class="sidebar-nav-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+            <span>Progress Reports</span>
+          </a>
+          <a href="payments.html" class="sidebar-nav-item active">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg>
+            <span>Fee Payments</span>
+          </a>
+          <a href="messages.html" class="sidebar-nav-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22 6 12 13 2 6"></polyline></svg>
+            <span>Messages</span>
+          </a>
+
+        <div class="sidebar-section-label">ACCOUNT</div>
+          <a href="profile.html" class="sidebar-nav-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+            <span>Profile</span>
+          </a>
+          <a href="settings.html" class="sidebar-nav-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+            <span>Settings</span>
+          </a>
+          <a href="../pages/login.html" class="sidebar-nav-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+            <span>Logout</span>
+          </a>
+      </nav>
+    </aside>
+    <div class="sidebar-overlay"></div>
+    <main class="dashboard-main">
+      <!-- Dashboard Topbar -->
+      <header class="dashboard-topbar">
+        <div class="topbar-left">
+          <button type="button" class="mobile-sidebar-btn" aria-label="Open Mobile Menu">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+          </button>
+          <div style="font-size: var(--fs-sm); font-weight: var(--fw-medium); color: var(--text-secondary);">
+            <span style="color: var(--text-tertiary);">Parent Dashboard</span> &nbsp;/&nbsp; <span style="color: var(--text-primary); font-weight: var(--fw-semibold);">Fee Payments</span>
+          </div>
+        </div>
+
+        <div class="topbar-right">
+          <!-- Student switcher -->
+          <div class="student-switcher" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false" title="Switch Student Profile">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+            <span class="student-name">Alex Miller</span>
+            <span class="student-grade">— Grade 10</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            <div class="switcher-dropdown">
+              <a href="#" class="switcher-option active" data-student-name="Alex Miller" data-student-grade="Grade 10">
+                <span><strong>Alex Miller</strong></span>
+                <span class="badge badge-primary">Grade 10</span>
+              </a>
+              <a href="#" class="switcher-option" data-student-name="Chloe Miller" data-student-grade="Grade 6">
+                <span><strong>Chloe Miller</strong></span>
+                <span class="badge badge-outline">Grade 6</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Notification Bell -->
+          <div class="notification-btn" tabindex="0" role="button" aria-label="Notifications Dropdown">
+            <button type="button" class="btn btn-ghost btn-icon" style="position:relative;" aria-label="Notifications">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+              <span class="notification-count">3</span>
+            </button>
+            <div class="notification-dropdown">
+              <div style="padding: var(--space-2); border-bottom: 1px solid var(--border-color); display:flex; justify-content:space-between; align-items:center;">
+                <span style="font-weight: var(--fw-semibold); font-size: var(--fs-sm); color: var(--text-primary);">Notifications</span>
+                <span class="badge badge-primary">3 New</span>
+              </div>
+              <div class="notification-item">
+                <div style="width:8px; height:8px; border-radius:50%; background:var(--color-primary); margin-top:6px; flex-shrink:0;"></div>
+                <div>
+                  <p style="font-size: var(--fs-xs); font-weight: var(--fw-medium); margin-bottom:2px; color: var(--text-primary);">Term 1 PTM scheduled for Nov 23</p>
+                  <span style="font-size: 11px; color: var(--text-tertiary);">2 hours ago</span>
+                </div>
+              </div>
+              <div class="notification-item">
+                <div style="width:8px; height:8px; border-radius:50%; background:var(--color-primary); margin-top:6px; flex-shrink:0;"></div>
+                <div>
+                  <p style="font-size: var(--fs-xs); font-weight: var(--fw-medium); margin-bottom:2px; color: var(--text-primary);">Calculus test score posted: 94/100</p>
+                  <span style="font-size: 11px; color: var(--text-tertiary);">Yesterday</span>
+                </div>
+              </div>
+              <div class="notification-item">
+                <div style="width:8px; height:8px; border-radius:50%; background:var(--color-primary); margin-top:6px; flex-shrink:0;"></div>
+                <div>
+                  <p style="font-size: var(--fs-xs); font-weight: var(--fw-medium); margin-bottom:2px; color: var(--text-primary);">Fee invoice for Nov generated ($140)</p>
+                  <span style="font-size: 11px; color: var(--text-tertiary);">3 days ago</span>
+                </div>
+              </div>
+              <div style="padding: 10px; text-align: center; border-top: 1px solid var(--border-color);">
+                <a href="messages.html" style="font-size: var(--fs-xs); color: var(--color-primary); font-weight: var(--fw-semibold);">View All Messages</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- RTL Toggle -->
+          <button type="button" class="rtl-toggle-btn btn btn-ghost btn-icon" title="Toggle RTL" aria-label="Toggle RTL" style="font-family: var(--font-heading); font-weight: 700; font-size: 13px;">RTL</button>
+
+          <!-- Theme Toggle -->
+          <button type="button" class="theme-toggle-btn btn btn-ghost btn-icon" title="Toggle Color Theme" aria-label="Toggle Theme">
+            <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+          </button>
+        </div>
+      </header>
+      <div class="dashboard-content">
+        <!-- Header -->
+        <div class="dash-card reveal" style="padding: var(--space-4); margin-bottom: var(--space-3);">
+          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: var(--space-2);">
+            <div>
+              <h1 style="font-size: var(--fs-2xl); font-weight: var(--fw-bold); margin-bottom: var(--space-1);">Fee Payments &amp; Receipts</h1>
+              <p style="color: var(--text-secondary); font-size: var(--fs-sm);">Review tuition invoices, settle outstanding fees online, and download tax-compliant payment receipts.</p>
+            </div>
+            <div>
+              <span class="badge badge-primary">Academic Year 2024–25</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4 KPI Fee Summary Cards -->
+        <div class="kpi-grid reveal">
+          <div class="kpi-card">
+            <div>
+              <div class="kpi-label">Total Fee</div>
+              <div class="kpi-value">$42,000</div>
+              <p style="font-size: var(--fs-xs); color: var(--text-tertiary); margin-top: 4px;">Full Year Curriculum</p>
+            </div>
+            <div class="kpi-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg>
+            </div>
+          </div>
+
+          <div class="kpi-card">
+            <div>
+              <div class="kpi-label">Paid to Date</div>
+              <div class="kpi-value">$37,500</div>
+              <p style="font-size: var(--fs-xs); color: var(--color-primary); margin-top: 4px;">89.3% Settled</p>
+            </div>
+            <div class="kpi-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+            </div>
+          </div>
+
+          <div class="kpi-card">
+            <div>
+              <div class="kpi-label">Balance Due</div>
+              <div class="kpi-value" style="color: var(--color-primary);">$180</div>
+              <p style="font-size: var(--fs-xs); color: var(--color-primary); margin-top: 4px;">2 Invoices Pending</p>
+            </div>
+            <div class="kpi-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+            </div>
+          </div>
+
+          <div class="kpi-card">
+            <div>
+              <div class="kpi-label">Next Due Date</div>
+              <div class="kpi-value" style="font-size: var(--fs-xl);">Dec 01, 2024</div>
+              <p style="font-size: var(--fs-xs); color: var(--text-tertiary); margin-top: 4px;">Payment Window Active</p>
+            </div>
+            <div class="kpi-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pending Invoices Table (2 records) -->
+        <div class="dash-card reveal">
+          <div class="dash-card-header">
+            <div>
+              <h2 class="dash-card-title">Pending Invoices</h2>
+              <span style="font-size: var(--fs-xs); color: var(--text-tertiary);">Outstanding fees requiring payment</span>
+            </div>
+            <span class="badge badge-outline">2 Pending</span>
+          </div>
+          <div class="dash-card-body" style="padding: 0;">
+            <div class="table-wrapper" style="border: none; border-radius: 0;">
+              <table class="data-table data-table-cards">
+                <thead>
+                  <tr>
+                    <th>Invoice ID</th>
+                    <th>Subject / Description</th>
+                    <th>Billing Period</th>
+                    <th>Amount Due</th>
+                    <th>Due Date</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td data-label="Invoice ID"><strong style="color: var(--color-primary); font-family: monospace;">INV-2024-118</strong></td>
+                    <td data-label="Subject / Description">
+                      <div style="font-weight: var(--fw-semibold);">Mathematics &amp; Physics Monthly Tuition</div>
+                      <span style="font-size: 11px; color: var(--text-tertiary);">Core classroom lectures &amp; doubt sessions</span>
+                    </td>
+                    <td data-label="Billing Period">November 2024</td>
+                    <td data-label="Amount Due"><strong style="font-size: var(--fs-md); color: var(--color-primary);">$140</strong></td>
+                    <td style="font-size: var(--fs-xs);" data-label="Due Date">Nov 25, 2024</td>
+                    <td data-label="Status"><span class="badge badge-outline">Pending</span></td>
+                    <td data-label="Action">
+                      <button type="button" class="btn btn-primary btn-sm pay-now-btn" data-invoice-id="INV-2024-118" data-amount="$140" data-subject="Mathematics &amp; Physics Monthly Tuition">
+                        Pay Now
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td data-label="Invoice ID"><strong style="color: var(--color-primary); font-family: monospace;">INV-2024-119</strong></td>
+                    <td data-label="Subject / Description">
+                      <div style="font-weight: var(--fw-semibold);">Science Lab Materials &amp; Mock Test Series</div>
+                      <span style="font-size: 11px; color: var(--text-tertiary);">AP &amp; Honors Term 2 practice exam package</span>
+                    </td>
+                    <td data-label="Billing Period">Term 2 (2024)</td>
+                    <td data-label="Amount Due"><strong style="font-size: var(--fs-md); color: var(--color-primary);">$40</strong></td>
+                    <td style="font-size: var(--fs-xs);" data-label="Due Date">Dec 01, 2024</td>
+                    <td data-label="Status"><span class="badge badge-outline">Pending</span></td>
+                    <td data-label="Action">
+                      <button type="button" class="btn btn-primary btn-sm pay-now-btn" data-invoice-id="INV-2024-119" data-amount="$40" data-subject="Science Lab Materials &amp; Mock Test Series">
+                        Pay Now
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- Payment History Table (5 completed payments) -->
+        <div class="dash-card reveal">
+          <div class="dash-card-header">
+            <div>
+              <h2 class="dash-card-title">Payment History &amp; Receipts</h2>
+              <span style="font-size: var(--fs-xs); color: var(--text-tertiary);">Completed transactions for current academic session</span>
+            </div>
+            <span class="badge badge-primary">5 Receipts Available</span>
+          </div>
+          <div class="dash-card-body" style="padding: 0;">
+            <div class="table-wrapper" style="border: none; border-radius: 0;">
+              <table class="data-table data-table-cards">
+                <thead>
+                  <tr>
+                    <th>Receipt No.</th>
+                    <th>Payment Date</th>
+                    <th>Subject / Fee Type</th>
+                    <th>Amount Paid</th>
+                    <th>Method</th>
+                    <th>Status</th>
+                    <th>Receipt</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td data-label="Receipt No."><strong style="font-family: monospace;">RCP-2024-092</strong></td>
+                    <td style="font-size: var(--fs-xs);" data-label="Payment Date">Oct 15, 2024</td>
+                    <td data-label="Subject / Fee Type">Mathematics &amp; Physics Tuition</td>
+                    <td data-label="Amount Paid"><strong>$180</strong></td>
+                    <td data-label="Method">UPI (Google Pay)</td>
+                    <td data-label="Status"><span class="badge badge-primary">Paid</span></td>
+                    <td data-label="Receipt">
+                      <button type="button" class="btn btn-outline btn-sm view-receipt-btn" data-receipt-id="RCP-2024-092" data-receipt-date="Oct 15, 2024" data-student="Alex Miller" data-grade="Grade 10" data-subject="Mathematics &amp; Physics" data-amount="$180" data-method="UPI (Google Pay)" data-period="October 2024">
+                        View Receipt
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td data-label="Receipt No."><strong style="font-family: monospace;">RCP-2024-075</strong></td>
+                    <td style="font-size: var(--fs-xs);" data-label="Payment Date">Sep 12, 2024</td>
+                    <td data-label="Subject / Fee Type">Chemistry &amp; Computer Science</td>
+                    <td data-label="Amount Paid"><strong>$180</strong></td>
+                    <td data-label="Method">Net Banking (HDFC)</td>
+                    <td data-label="Status"><span class="badge badge-primary">Paid</span></td>
+                    <td data-label="Receipt">
+                      <button type="button" class="btn btn-outline btn-sm view-receipt-btn" data-receipt-id="RCP-2024-075" data-receipt-date="Sep 12, 2024" data-student="Alex Miller" data-grade="Grade 10" data-subject="Chemistry &amp; Computer Science" data-amount="$180" data-method="Net Banking (HDFC)" data-period="September 2024">
+                        View Receipt
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td data-label="Receipt No."><strong style="font-family: monospace;">RCP-2024-058</strong></td>
+                    <td style="font-size: var(--fs-xs);" data-label="Payment Date">Aug 10, 2024</td>
+                    <td data-label="Subject / Fee Type">Term 1 Tuition &amp; Study Materials</td>
+                    <td data-label="Amount Paid"><strong>$480</strong></td>
+                    <td data-label="Method">Credit Card (Visa)</td>
+                    <td data-label="Status"><span class="badge badge-primary">Paid</span></td>
+                    <td data-label="Receipt">
+                      <button type="button" class="btn btn-outline btn-sm view-receipt-btn" data-receipt-id="RCP-2024-058" data-receipt-date="Aug 10, 2024" data-student="Alex Miller" data-grade="Grade 10" data-subject="Term 1 Tuition &amp; Study Materials" data-amount="$480" data-method="Credit Card (Visa)" data-period="Aug – Sep 2024">
+                        View Receipt
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td data-label="Receipt No."><strong style="font-family: monospace;">RCP-2024-041</strong></td>
+                    <td style="font-size: var(--fs-xs);" data-label="Payment Date">Jul 08, 2024</td>
+                    <td data-label="Subject / Fee Type">English Language &amp; Literature</td>
+                    <td data-label="Amount Paid"><strong>$140</strong></td>
+                    <td data-label="Method">Debit Card (Mastercard)</td>
+                    <td data-label="Status"><span class="badge badge-primary">Paid</span></td>
+                    <td data-label="Receipt">
+                      <button type="button" class="btn btn-outline btn-sm view-receipt-btn" data-receipt-id="RCP-2024-041" data-receipt-date="Jul 08, 2024" data-student="Alex Miller" data-grade="Grade 10" data-subject="English Language &amp; Literature" data-amount="$140" data-method="Debit Card (Mastercard)" data-period="July 2024">
+                        View Receipt
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td data-label="Receipt No."><strong style="font-family: monospace;">RCP-2024-012</strong></td>
+                    <td style="font-size: var(--fs-xs);" data-label="Payment Date">Jun 05, 2024</td>
+                    <td data-label="Subject / Fee Type">Annual Admission &amp; Registration</td>
+                    <td data-label="Amount Paid"><strong>$13,000</strong></td>
+                    <td data-label="Method">Online Transfer (NEFT)</td>
+                    <td data-label="Status"><span class="badge badge-primary">Paid</span></td>
+                    <td data-label="Receipt">
+                      <button type="button" class="btn btn-outline btn-sm view-receipt-btn" data-receipt-id="RCP-2024-012" data-receipt-date="Jun 05, 2024" data-student="Alex Miller" data-grade="Grade 10" data-subject="Annual Admission &amp; Registration" data-amount="$13,000" data-method="Online Transfer (NEFT)" data-period="Academic Year 2024–25">
+                        View Receipt
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div style="margin-top: var(--space-4); padding-top: var(--space-2); border-top: 1px solid var(--border-color); text-align: center;">
+          <p style="font-size: var(--fs-xs); color: var(--text-tertiary); font-style: italic;">* All student data shown is fictional for demonstration purposes.</p>
+        </div>
+      </div>
+    </main>
+  </div>
+  <!-- Payment Modal -->
+  <div class="modal-overlay" id="paymentModal" role="dialog" aria-modal="true" aria-labelledby="paymentModalTitle">
+    <div class="modal">
+      <div class="modal-header">
+        <h3 class="modal-title" id="paymentModalTitle">Pay Tuition Invoice</h3>
+        <button type="button" class="modal-close" data-modal-close aria-label="Close modal">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <!-- Invoice Summary Box -->
+        <div style="background-color: var(--color-primary-light); padding: var(--space-3); border-radius: var(--border-radius-md); margin-bottom: var(--space-3); border-left: 4px solid var(--color-primary);">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+            <span style="font-size: var(--fs-xs); color: var(--text-tertiary);">Invoice ID</span>
+            <span class="payment-invoice-id" style="font-weight: var(--fw-bold); font-family: monospace;">INV-2024-118</span>
+          </div>
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+            <span style="font-size: var(--fs-xs); color: var(--text-tertiary);">Subject Description</span>
+            <span class="payment-subject" style="font-weight: var(--fw-semibold); font-size: var(--fs-sm);">Mathematics &amp; Physics</span>
+          </div>
+          <div style="display: flex; justify-content: space-between; align-items: center; padding-top: 8px; border-top: 1px dashed var(--border-color);">
+            <span style="font-weight: var(--fw-semibold);">Total Amount to Pay</span>
+            <span class="payment-amount" style="font-family: var(--font-heading); font-size: var(--fs-xl); font-weight: var(--fw-extrabold); color: var(--color-primary);">$140</span>
+          </div>
+        </div>
+
+        <!-- Payment Method Selector -->
+        <div style="margin-bottom: var(--space-3);">
+          <label class="form-label" style="margin-bottom: var(--space-2);">Choose Secure Payment Method</label>
+          <div style="display: grid; gap: var(--space-1);">
+            <label style="display: flex; align-items: center; gap: var(--space-2); padding: 10px 14px; border: 1px solid var(--border-color); border-radius: var(--border-radius-sm); cursor: pointer;">
+              <input type="radio" name="payment_method" value="upi" checked style="accent-color: var(--color-primary);">
+              <div>
+                <strong>UPI Instant Pay</strong>
+                <span style="font-size: 11px; color: var(--text-tertiary); display: block;">Google Pay, PhonePe, Paytm, BHIM</span>
+              </div>
+            </label>
+            <label style="display: flex; align-items: center; gap: var(--space-2); padding: 10px 14px; border: 1px solid var(--border-color); border-radius: var(--border-radius-sm); cursor: pointer;">
+              <input type="radio" name="payment_method" value="card" style="accent-color: var(--color-primary);">
+              <div>
+                <strong>Credit / Debit Card</strong>
+                <span style="font-size: 11px; color: var(--text-tertiary); display: block;">Visa, Mastercard, RuPay, Maestro</span>
+              </div>
+            </label>
+            <label style="display: flex; align-items: center; gap: var(--space-2); padding: 10px 14px; border: 1px solid var(--border-color); border-radius: var(--border-radius-sm); cursor: pointer;">
+              <input type="radio" name="payment_method" value="netbanking" style="accent-color: var(--color-primary);">
+              <div>
+                <strong>Net Banking</strong>
+                <span style="font-size: 11px; color: var(--text-tertiary); display: block;">HDFC, ICICI, SBI, Axis, Kotak</span>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <p style="font-size: 11px; color: var(--text-tertiary); text-align: center;">256-bit SSL encrypted &bull; Instant tax receipt generated automatically</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-ghost" data-modal-close>Cancel</button>
+        <button type="button" class="btn btn-primary process-payment-btn" style="min-width: 150px;">Confirm &amp; Pay</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Receipt Modal (Printable) -->
+  <div class="modal-overlay" id="receiptModal" role="dialog" aria-modal="true" aria-labelledby="receiptModalTitle">
+    <div class="modal">
+      <div class="modal-header">
+        <h3 class="modal-title" id="receiptModalTitle">Fee Payment Receipt</h3>
+        <button type="button" class="modal-close" data-modal-close aria-label="Close modal">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <!-- dashboard.js populates dynamically via initReceiptModal() -->
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-ghost" data-modal-close>Close</button>
+        <button type="button" class="btn btn-primary btn-print">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 6px;"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+          Print Receipt
+        </button>
+      </div>
+    </div>
+  </div>
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/dashboard.js"></script>
+</body>
+</html>

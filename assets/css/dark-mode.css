@@ -1,0 +1,217 @@
+/* ============================================================
+   BRIGHTPATH ACADEMY — DARK MODE OVERRIDES
+   Variable overrides & component contrast rules
+   ============================================================ */
+
+[data-theme="dark"] {
+  /* --- Surfaces & Backgrounds --- */
+  --bg-body: #0B0F19;
+  --bg-section: #0B0F19;
+  --bg-section-alt: rgba(29, 78, 216, 0.04);
+  --bg-card: #131825;
+  --bg-card-hover: rgba(29, 78, 216, 0.06);
+  --bg-input: #1A1F2E;
+  --bg-header: rgba(11, 15, 25, 0.92);
+  --bg-footer: #060911;
+  --bg-sidebar: #101422;
+  --bg-tooltip: #FFFFFF;
+  --bg-skeleton: rgba(255, 255, 255, 0.06);
+  --bg-skeleton-shine: rgba(255, 255, 255, 0.1);
+
+  /* --- Text Colors --- */
+  --text-primary: #FFFFFF;
+  --text-secondary: rgba(255, 255, 255, 0.64);
+  --text-tertiary: rgba(255, 255, 255, 0.4);
+  --text-on-dark: #0B0F19;
+  --text-on-dark-secondary: rgba(255, 255, 255, 0.7);
+  --text-link: #6B9AFF;
+  --text-link-hover: #93B5FF;
+
+  /* --- Borders --- */
+  --border-color: rgba(255, 255, 255, 0.08);
+  --border-color-strong: rgba(255, 255, 255, 0.14);
+  --border-input: rgba(255, 255, 255, 0.14);
+  --border-input-focus: #6B9AFF;
+
+  /* --- Shadows --- */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.2);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.25);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.3);
+  --shadow-xl: 0 16px 48px rgba(0, 0, 0, 0.35);
+  --shadow-card: 0 1px 4px rgba(0, 0, 0, 0.15);
+  --shadow-card-hover: 0 8px 24px rgba(29, 78, 216, 0.15);
+
+  /* --- Primary Derived (boosted for dark contrast) --- */
+  --color-primary-light: rgba(107, 154, 255, 0.1);
+  --color-primary-lighter: rgba(107, 154, 255, 0.05);
+  --color-primary-border: rgba(107, 154, 255, 0.2);
+  --color-primary-badge: rgba(107, 154, 255, 0.14);
+  --color-primary-text-on-white: #6B9AFF;
+
+  /* --- Status (dark-safe) --- */
+  --status-success: #6B9AFF;
+  --status-success-bg: rgba(107, 154, 255, 0.1);
+  --status-warning: rgba(255, 255, 255, 0.6);
+  --status-warning-bg: rgba(255, 255, 255, 0.06);
+  --status-danger: #FFFFFF;
+  --status-danger-bg: rgba(255, 255, 255, 0.08);
+  --status-info: rgba(107, 154, 255, 0.8);
+  --status-info-bg: rgba(107, 154, 255, 0.08);
+}
+
+/* --- Dark Mode Component Overrides --- */
+
+[data-theme="dark"] .site-header {
+  border-bottom-color: rgba(255, 255, 255, 0.06);
+}
+
+[data-theme="dark"] .header-logo .logo-text {
+  color: var(--color-white);
+}
+
+[data-theme="dark"] .mobile-drawer {
+  background-color: var(--bg-card);
+  border-left: 1px solid var(--border-color);
+}
+
+[data-theme="dark"] .form-select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23FFFFFF' viewBox='0 0 16 16'%3E%3Cpath d='M4.646 5.646a.5.5 0 0 1 .708 0L8 8.293l2.646-2.647a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
+}
+
+[data-theme="dark"] .stats-strip {
+  background-color: rgba(29, 78, 216, 0.85);
+}
+
+[data-theme="dark"] .newsletter-banner {
+  background-color: rgba(29, 78, 216, 0.85);
+}
+
+[data-theme="dark"] .footer-brand .footer-logo-text {
+  color: var(--color-white);
+}
+
+[data-theme="dark"] .sidebar-logo .logo-text {
+  color: var(--color-white);
+}
+
+[data-theme="dark"] .pricing-toggle {
+  background-color: rgba(255, 255, 255, 0.04);
+}
+
+[data-theme="dark"] .role-switch {
+  background-color: rgba(255, 255, 255, 0.04);
+}
+
+[data-theme="dark"] .auth-card {
+  background-color: var(--bg-card);
+}
+
+[data-theme="dark"] .auth-logo .logo-text {
+  color: var(--color-white);
+}
+
+[data-theme="dark"] .confirmation-card {
+  background-color: var(--bg-card);
+}
+
+[data-theme="dark"] .page-banner {
+  background-color: rgba(29, 78, 216, 0.04);
+}
+
+[data-theme="dark"] .timetable {
+  background-color: rgba(255, 255, 255, 0.06);
+}
+
+[data-theme="dark"] .timetable-header {
+  background-color: rgba(255, 255, 255, 0.04);
+}
+
+[data-theme="dark"] .comparison-table th {
+  background-color: rgba(255, 255, 255, 0.04);
+}
+
+[data-theme="dark"] .data-table th {
+  background-color: rgba(255, 255, 255, 0.04);
+}
+
+[data-theme="dark"] .timeline-item::before {
+  border-color: var(--bg-body);
+}
+
+[data-theme="dark"] .avatar-group .avatar {
+  border-color: var(--bg-body);
+}
+
+[data-theme="dark"] [data-tooltip]::after {
+  background-color: var(--color-white);
+  color: var(--color-black);
+}
+
+/* --- Ensure button text contrast in dark mode --- */
+[data-theme="dark"] .btn-dark {
+  background-color: var(--color-white);
+  color: var(--color-black);
+  border-color: var(--color-white);
+}
+
+[data-theme="dark"] .btn-dark:hover {
+  background-color: transparent;
+  color: var(--color-white);
+}
+
+[data-theme="dark"] .btn-white {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--color-white);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+[data-theme="dark"] .btn-white:hover {
+  background-color: var(--color-white);
+  color: var(--color-black);
+}
+
+/* Ensure no text disappears in dark mode */
+[data-theme="dark"] h1,
+[data-theme="dark"] h2,
+[data-theme="dark"] h3,
+[data-theme="dark"] h4,
+[data-theme="dark"] h5,
+[data-theme="dark"] h6 {
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .card-title,
+[data-theme="dark"] .modal-title,
+[data-theme="dark"] .dash-card-title,
+[data-theme="dark"] .section-header h2 {
+  color: var(--text-primary);
+}
+
+/* Philosophy items in dark mode */
+[data-theme="dark"] .philosophy-item {
+  background-color: rgba(255, 255, 255, 0.04);
+}
+
+[data-theme="dark"] .philosophy-item:hover {
+  background-color: rgba(29, 78, 216, 0.18);
+  border-color: rgba(29, 78, 216, 0.45);
+}
+
+/* Scrollbar in dark mode */
+[data-theme="dark"] ::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 4px;
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
