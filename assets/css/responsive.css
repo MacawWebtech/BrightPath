@@ -1156,11 +1156,11 @@ img, svg, video, canvas, audio, iframe, embed, object {
 @media (max-width: 639px) {
   /* --- Hero (Home 2) --- */
   .hero .hero-split-grid, .hero.hero-split-grid { gap: var(--space-4) !important; }
-  .hero-content { width: 100%; min-width: 0; text-align: left; }
+  .hero-content { width: 100%; min-width: 0; text-align: start; }
   .hero-badge {
     max-width: 100%;
     align-items: flex-start;
-    text-align: left;
+    text-align: start;
     border-radius: var(--border-radius-md);
     line-height: 1.35;
   }
@@ -1171,7 +1171,7 @@ img, svg, video, canvas, audio, iframe, embed, object {
     overflow: visible;
     padding-bottom: 0;
   }
-  .hero .pill-group .badge { white-space: normal; text-align: left; }
+  .hero .pill-group .badge { white-space: normal; text-align: start; }
   .hero-content [style*="grid-template-columns: repeat(3, 1fr)"] {
     gap: var(--space-2) !important;
     text-align: center;
@@ -1205,8 +1205,11 @@ img, svg, video, canvas, audio, iframe, embed, object {
   main [style*="grid-template-columns: 1fr 1fr; gap: var(--space-4)"] { margin-bottom: var(--space-3) !important; }
 
   /* --- Section intro text and CTA blocks --- */
-  .section-header, .section-header.text-center { text-align: center; }
+  .section-header:not(.text-center) { text-align: start; }
+  .section-header.text-center { text-align: center; }
   .section-header p { max-width: 100%; }
+  .section-header:not(.text-center) p { margin-inline: 0; }
+  .section-header.text-center p { margin-inline: auto; }
   #demo-cta { padding-block: var(--space-6) !important; }
   #demo-cta h2 { font-size: var(--fs-2xl) !important; }
   #demo-cta p { font-size: var(--fs-base) !important; }
@@ -1324,7 +1327,7 @@ img, svg, video, canvas, audio, iframe, embed, object {
     flex-direction: column;
     align-items: flex-start;
     gap: 4px;
-    text-align: left !important;
+    text-align: start !important;
   }
   .data-table-cards td:has(> div)::before { flex: 0 0 auto; }
   .data-table-cards td:has(> div) > span { display: block; }
@@ -1479,3 +1482,119 @@ img, svg, video, canvas, audio, iframe, embed, object {
 
 /* Keep small row icons from shrinking when their text wraps */
 #grade-courses-grid .card svg { flex-shrink: 0; }
+
+
+/* Paragraph copy remains 16px in the demo CTA as well. */
+#demo-cta p { font-size: 16px !important; }
+
+
+/* ============================================================
+   DASHBOARD TOPBAR — TABLET LAYOUT (640px–1023px)
+   Keep the menu, breadcrumb, student switcher and controls on one
+   clean row without overlapping or pushing the page horizontally.
+   ============================================================ */
+@media (min-width: 640px) and (max-width: 1023px) {
+  .dashboard-topbar {
+    min-width: 0;
+    min-height: var(--header-height);
+    height: auto;
+    gap: 10px;
+    padding-inline: 16px;
+    flex-wrap: nowrap;
+  }
+
+  .topbar-left {
+    flex: 1 1 auto;
+    min-width: 0;
+    max-width: none;
+    gap: 8px;
+  }
+
+  .topbar-left > div {
+    flex: 1 1 auto;
+    min-width: 0;
+    max-width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 12px !important;
+  }
+
+  .mobile-sidebar-btn {
+    flex: 0 0 44px;
+    width: 44px;
+    height: 44px;
+    min-width: 44px !important;
+    min-height: 44px !important;
+  }
+
+  .topbar-right {
+    flex: 0 1 auto;
+    min-width: 0;
+    max-width: 58%;
+    gap: 6px;
+    justify-content: flex-end;
+  }
+
+  /* The avatar remains available in the sidebar's Profile item. */
+  .topbar-right > a[href$="profile.html"] {
+    display: none !important;
+  }
+
+  .student-switcher {
+    flex: 0 1 150px;
+    width: 150px;
+    max-width: 150px;
+    min-width: 0;
+    gap: 5px;
+    padding: 6px 9px;
+  }
+
+  .student-switcher > svg {
+    flex: 0 0 auto;
+  }
+
+  .student-switcher .student-name {
+    flex: 1 1 auto;
+    min-width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 12px;
+  }
+
+  .student-switcher .student-grade {
+    display: none !important;
+  }
+
+  .topbar-right .btn-icon {
+    display: inline-flex;
+    flex: 0 0 44px;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    min-height: 44px;
+    padding: 0;
+  }
+
+  .topbar-right .btn-icon svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .notification-btn {
+    display: inline-flex;
+    flex: 0 0 44px;
+    align-items: center;
+  }
+
+  .notification-count {
+    top: 2px;
+    right: 2px;
+    width: 16px;
+    height: 16px;
+    font-size: 9px;
+  }
+}

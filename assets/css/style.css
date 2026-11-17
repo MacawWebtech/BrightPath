@@ -1206,7 +1206,7 @@ table {
   color: var(--text-tertiary);
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  text-align: left;
+  text-align: start;
   background-color: var(--bg-section-alt);
   border-bottom: 1px solid var(--border-color);
   white-space: nowrap;
@@ -1530,7 +1530,7 @@ table {
   font-size: var(--fs-md);
   font-weight: var(--fw-semibold);
   color: var(--text-primary);
-  text-align: left;
+  text-align: start;
   cursor: pointer;
   transition: background-color var(--transition-fast);
   min-height: 56px;
@@ -3004,7 +3004,7 @@ html.js-ready .reveal:not(.revealed) {
 }
 
 .confirmation-details {
-  text-align: left;
+  text-align: start;
   margin: var(--space-4) 0;
 }
 
@@ -3131,7 +3131,7 @@ html.js-ready .reveal:not(.revealed) {
   font-size: var(--fs-md);
   font-weight: var(--fw-bold);
   background-color: var(--bg-section-alt);
-  text-align: left;
+  text-align: start;
   border-bottom: 2px solid var(--border-color);
 }
 
@@ -3354,13 +3354,13 @@ html.js-ready .reveal:not(.revealed) {
   background: transparent;
   border: none;
   cursor: pointer;
-  text-align: left;
+  text-align: start;
   transition: background-color var(--transition-fast);
   min-height: 60px;
 }
 
 [dir="rtl"] .syllabus-module-trigger {
-  text-align: right;
+  text-align: start;
 }
 
 .syllabus-module-trigger:hover {
@@ -3474,36 +3474,181 @@ html.js-ready .reveal:not(.revealed) {
 }
 
 /* ============================================================
-   GLOBAL: CENTERED HEADINGS
+   SITE-WIDE TEXT ALIGNMENT NORMALIZATION
+   Keep normal content aligned to its reading direction. Center only
+   components that explicitly request centered alignment.
    ============================================================ */
-h1, h2, h3, h4, h5, h6 { text-align: center !important; }
+body {
+  text-align: start;
+}
+
+h1, h2, h3, h4, h5, h6,
+p, li, blockquote, figcaption, small {
+  text-align: inherit;
+}
+
+/* Page banners are intentionally centered on every inner page. */
 .page-banner,
-.page-banner .container-inner { text-align: center; }
+.page-banner .container-inner {
+  text-align: center;
+}
+
 .page-banner p,
-.section-header p { margin-inline: auto; }
-.page-banner .badge { margin-inline: auto; }
+.page-banner .badge {
+  margin-inline: auto;
+}
+
+/* Section headers follow their markup: left/start by default, centered
+   only when the .text-center modifier is present. */
+.section-header:not(.text-center) {
+  text-align: start;
+}
+
+.section-header:not(.text-center) p {
+  margin-inline: 0;
+}
+
+.section-header.text-center {
+  text-align: center;
+}
+
+.section-header.text-center p {
+  margin-inline: auto;
+}
+
+/* Hero and long-form content keep a readable start edge. */
+.hero-content,
+.article-content,
+.dashboard-main {
+  text-align: start;
+}
+
+/* Preserve intentional badge wrapping without forcing all home-page copy
+   or card contents into centered alignment. */
+.home-centered main .card .badge {
+  white-space: normal;
+  max-width: 100%;
+  line-height: 1.3;
+}
+
 
 /* ============================================================
-   HOME PAGES 1 & 2: CENTER-ALIGNED TEXT
-   (scoped by body.home-centered; header, footer and form fields keep their own alignment)
+   TRUST STATS, 16PX PARAGRAPHS & PAGE-HEADING JPG BACKGROUND
+   Replace assets/images/banners/page-banner.jpg to use your own JPG.
    ============================================================ */
-.home-centered main { text-align: center; }
-.home-centered main :where(h1,h2,h3,h4,h5,h6,p,li,blockquote,figcaption,small,strong,em,span,div):not(form *) {
-  text-align: center !important;
+
+p {
+  font-size: 16px !important;
 }
-.home-centered main .hero-actions,
-.home-centered main .pill-group,
-.home-centered main .tab-group,
-.home-centered main .card-meta { justify-content: center; }
-/* Flex rows without their own justify-content (badge rows, button rows) sit in the middle */
-.home-centered main div[style*="display: flex"][style*="flex-wrap"],
-.home-centered main div[style*="display:flex"][style*="flex-wrap"],
-.home-centered main div:has(> a.btn):not(.card-footer),
-.home-centered main div:has(> button.btn):not(.card-footer) { justify-content: center; }
-/* Lone icon tiles at the top of a card */
-.home-centered main .card-body > div:has(> svg:only-child),
-.home-centered main .card > div:has(> svg:only-child) { margin-inline: auto; }
-/* Star-rating rows (only svg children) */
-.home-centered main div:has(> svg):not(:has(> :not(svg))) { justify-content: center; }
-/* Long badges wrap inside their card instead of spilling out */
-.home-centered main .card .badge { white-space: normal; max-width: 100%; line-height: 1.3; }
+
+.page-banner {
+  position: relative;
+  isolation: isolate;
+  background-color: #111827 !important;
+  background-image: none !important;
+  color: #ffffff;
+}
+
+/* Keep the photo subtle without placing a white wash over it. */
+.page-banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background-image: url("../images/banners/page-banner.jpg");
+  background-size: cover;
+  background-position: center 52%;
+  background-repeat: no-repeat;
+  opacity: 0.46;
+  pointer-events: none;
+}
+
+/* A restrained dark tint keeps white page titles readable over the photo. */
+.page-banner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(
+    135deg,
+    rgba(8, 15, 30, 0.42),
+    rgba(8, 15, 30, 0.30)
+  );
+  pointer-events: none;
+}
+
+.page-banner h1 {
+  color: #ffffff !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.32);
+}
+
+.page-banner p {
+  color: rgba(255, 255, 255, 0.92) !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.28);
+}
+
+.page-banner .section-label {
+  color: #eaf0ff !important;
+}
+
+.trust-stats-strip {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: center;
+  gap: var(--space-4);
+  width: 100%;
+  margin-top: var(--space-4);
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--border-color);
+  text-align: start;
+}
+
+.trust-stat-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+  min-width: 0;
+  text-align: start;
+}
+
+.trust-stat-item > div:last-child {
+  min-width: 0;
+  text-align: start;
+}
+
+@media (max-width: 767px) {
+  .trust-stats-strip {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-3);
+  }
+}
+
+@media (max-width: 479px) {
+  .trust-stats-strip {
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--space-2);
+  }
+}
+
+
+/* ============================================================
+   TRUST-STATS BANNER OVERLAY FIX
+   Keep the banner image continuous behind the trust statistics.
+   The previous full-viewport pseudo-element created a white band
+   that concealed the center of the page-banner image.
+   ============================================================ */
+.trust-stats-strip {
+  position: relative;
+  z-index: 1;
+  isolation: isolate;
+  border-top: 1px solid rgba(255, 255, 255, 0.32);
+}
+
+.trust-stat-item strong {
+  color: #ffffff !important;
+}
+
+.trust-stat-item span {
+  color: rgba(255, 255, 255, 0.86) !important;
+}
