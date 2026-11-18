@@ -3555,13 +3555,30 @@ p {
   position: absolute;
   inset: 0;
   z-index: -2;
-  background-image: url("../images/banners/page-banner.jpg");
+  background-image: var(--banner-image, none), url("../images/banners/page-banner.jpg");
   background-size: cover;
   background-position: center 52%;
   background-repeat: no-repeat;
   opacity: 0.46;
   pointer-events: none;
 }
+
+/* ------------------------------------------------------------
+   PER-PAGE HEADING BACKGROUND IMAGES
+   Put your jpg in assets/images/banners/ using the file names below
+   (or change the path). If a file is missing, the default
+   page-banner.jpg is shown instead.
+   ------------------------------------------------------------ */
+.page-banner--about { --banner-image: url("../images/banners/about-banner.jpg"); }
+.page-banner--batch-timings { --banner-image: url("../images/banners/batch-timings-banner.jpg"); }
+.page-banner--blog { --banner-image: url("../images/banners/blog-banner.jpg"); }
+.page-banner--contact { --banner-image: url("../images/banners/contact-banner.jpg"); }
+.page-banner--pricing { --banner-image: url("../images/banners/pricing-banner.jpg"); }
+.page-banner--privacy { --banner-image: url("../images/banners/privacy-banner.jpg"); }
+.page-banner--subject-details { --banner-image: url("../images/banners/subject-details-banner.jpg"); }
+.page-banner--subjects { --banner-image: url("../images/banners/subjects-banner.jpg"); }
+.page-banner--terms { --banner-image: url("../images/banners/terms-banner.jpg"); }
+.page-banner--tutors { --banner-image: url("../images/banners/tutors-banner.jpg"); }
 
 /* A restrained dark tint keeps white page titles readable over the photo. */
 .page-banner::after {
